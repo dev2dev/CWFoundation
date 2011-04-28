@@ -21,6 +21,10 @@
 		A6ED915613694AE6002DCEE4 /* libCWFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libCWFoundation.a */; };
 		A6ED915713694AFD002DCEE4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		A6ED915813694B29002DCEE4 /* NSInvocationVariableArgumentsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED914713694AC9002DCEE4 /* NSInvocationVariableArgumentsTest.m */; };
+		A6ED943A13697EAE002DCEE4 /* NSURLLoadingSystem+CWAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED943613697EAE002DCEE4 /* NSURLLoadingSystem+CWAdditions.h */; };
+		A6ED943B13697EAE002DCEE4 /* NSURLLoadingSystem+CWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED943713697EAE002DCEE4 /* NSURLLoadingSystem+CWAdditions.m */; };
+		A6ED943C13697EAE002DCEE4 /* CWFileURLFromDataTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED943813697EAE002DCEE4 /* CWFileURLFromDataTransformer.h */; };
+		A6ED943D13697EAE002DCEE4 /* CWFileURLFromDataTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED943913697EAE002DCEE4 /* CWFileURLFromDataTransformer.m */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +54,10 @@
 		A6ED914713694AC9002DCEE4 /* NSInvocationVariableArgumentsTest.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = NSInvocationVariableArgumentsTest.m; path = "Test Classes/NSInvocationVariableArgumentsTest.m"; sourceTree = "<group>"; };
 		A6ED914F13694AD8002DCEE4 /* UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6ED915013694AD8002DCEE4 /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
+		A6ED943613697EAE002DCEE4 /* NSURLLoadingSystem+CWAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = "NSURLLoadingSystem+CWAdditions.h"; path = "Classes/NSURLLoadingSystem+CWAdditions.h"; sourceTree = "<group>"; };
+		A6ED943713697EAE002DCEE4 /* NSURLLoadingSystem+CWAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "NSURLLoadingSystem+CWAdditions.m"; path = "Classes/NSURLLoadingSystem+CWAdditions.m"; sourceTree = "<group>"; };
+		A6ED943813697EAE002DCEE4 /* CWFileURLFromDataTransformer.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = CWFileURLFromDataTransformer.h; path = Classes/CWFileURLFromDataTransformer.h; sourceTree = "<group>"; };
+		A6ED943913697EAE002DCEE4 /* CWFileURLFromDataTransformer.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = CWFileURLFromDataTransformer.m; path = Classes/CWFileURLFromDataTransformer.m; sourceTree = "<group>"; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libCWFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCWFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -112,12 +120,16 @@
 				A6ED913313694ABB002DCEE4 /* CWLog.h */,
 				A6ED913413694ABB002DCEE4 /* NSError+CWAdditions.h */,
 				A6ED913513694ABB002DCEE4 /* NSError+CWAdditions.m */,
+				A6ED943813697EAE002DCEE4 /* CWFileURLFromDataTransformer.h */,
+				A6ED943913697EAE002DCEE4 /* CWFileURLFromDataTransformer.m */,
 				A6ED913613694ABB002DCEE4 /* NSInvocation+CWVariableArguments.h */,
 				A6ED913713694ABB002DCEE4 /* NSInvocation+CWVariableArguments.m */,
 				A6ED913813694ABB002DCEE4 /* NSOperationQueue+CWDefaultQueue.h */,
 				A6ED913913694ABB002DCEE4 /* NSOperationQueue+CWDefaultQueue.m */,
 				A6ED913A13694ABB002DCEE4 /* NSOperationQueue+CWReplaceOperation.h */,
 				A6ED913B13694ABB002DCEE4 /* NSOperationQueue+CWReplaceOperation.m */,
+				A6ED943613697EAE002DCEE4 /* NSURLLoadingSystem+CWAdditions.h */,
+				A6ED943713697EAE002DCEE4 /* NSURLLoadingSystem+CWAdditions.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -153,6 +165,8 @@
 				A6ED914213694ABB002DCEE4 /* NSOperationQueue+CWDefaultQueue.h in Headers */,
 				A6ED914413694ABB002DCEE4 /* NSOperationQueue+CWReplaceOperation.h in Headers */,
 				A6ED914813694AC9002DCEE4 /* NSInvocationVariableArgumentsTest.h in Headers */,
+				A6ED943A13697EAE002DCEE4 /* NSURLLoadingSystem+CWAdditions.h in Headers */,
+				A6ED943C13697EAE002DCEE4 /* CWFileURLFromDataTransformer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +278,8 @@
 				A6ED914113694ABB002DCEE4 /* NSInvocation+CWVariableArguments.m in Sources */,
 				A6ED914313694ABB002DCEE4 /* NSOperationQueue+CWDefaultQueue.m in Sources */,
 				A6ED914513694ABB002DCEE4 /* NSOperationQueue+CWReplaceOperation.m in Sources */,
+				A6ED943B13697EAE002DCEE4 /* NSURLLoadingSystem+CWAdditions.m in Sources */,
+				A6ED943D13697EAE002DCEE4 /* CWFileURLFromDataTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
