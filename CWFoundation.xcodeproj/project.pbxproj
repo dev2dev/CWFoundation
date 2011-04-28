@@ -25,6 +25,11 @@
 		A6ED943B13697EAE002DCEE4 /* NSURLLoadingSystem+CWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED943713697EAE002DCEE4 /* NSURLLoadingSystem+CWAdditions.m */; };
 		A6ED943C13697EAE002DCEE4 /* CWFileURLFromDataTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED943813697EAE002DCEE4 /* CWFileURLFromDataTransformer.h */; };
 		A6ED943D13697EAE002DCEE4 /* CWFileURLFromDataTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED943913697EAE002DCEE4 /* CWFileURLFromDataTransformer.m */; };
+		A6ED94EC13698284002DCEE4 /* CWXMLTranslation.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED94E813698284002DCEE4 /* CWXMLTranslation.h */; };
+		A6ED94ED13698284002DCEE4 /* CWXMLTranslation.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED94E913698284002DCEE4 /* CWXMLTranslation.m */; };
+		A6ED94EE13698284002DCEE4 /* CWXMLTranslator.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED94EA13698284002DCEE4 /* CWXMLTranslator.h */; };
+		A6ED94EF13698284002DCEE4 /* CWXMLTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED94EB13698284002DCEE4 /* CWXMLTranslator.m */; };
+		A6ED94F8136982AF002DCEE4 /* CWXMLTranslatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED94F7136982AF002DCEE4 /* CWXMLTranslatorTests.m */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +63,12 @@
 		A6ED943713697EAE002DCEE4 /* NSURLLoadingSystem+CWAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "NSURLLoadingSystem+CWAdditions.m"; path = "Classes/NSURLLoadingSystem+CWAdditions.m"; sourceTree = "<group>"; };
 		A6ED943813697EAE002DCEE4 /* CWFileURLFromDataTransformer.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = CWFileURLFromDataTransformer.h; path = Classes/CWFileURLFromDataTransformer.h; sourceTree = "<group>"; };
 		A6ED943913697EAE002DCEE4 /* CWFileURLFromDataTransformer.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = CWFileURLFromDataTransformer.m; path = Classes/CWFileURLFromDataTransformer.m; sourceTree = "<group>"; };
+		A6ED94E813698284002DCEE4 /* CWXMLTranslation.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = CWXMLTranslation.h; path = Classes/CWXMLTranslation.h; sourceTree = "<group>"; };
+		A6ED94E913698284002DCEE4 /* CWXMLTranslation.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = CWXMLTranslation.m; path = Classes/CWXMLTranslation.m; sourceTree = "<group>"; };
+		A6ED94EA13698284002DCEE4 /* CWXMLTranslator.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = CWXMLTranslator.h; path = Classes/CWXMLTranslator.h; sourceTree = "<group>"; };
+		A6ED94EB13698284002DCEE4 /* CWXMLTranslator.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = CWXMLTranslator.m; path = Classes/CWXMLTranslator.m; sourceTree = "<group>"; };
+		A6ED94F6136982AF002DCEE4 /* CWXMLTranslatorTests.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = CWXMLTranslatorTests.h; path = "Test Classes/CWXMLTranslatorTests.h"; sourceTree = "<group>"; };
+		A6ED94F7136982AF002DCEE4 /* CWXMLTranslatorTests.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = CWXMLTranslatorTests.m; path = "Test Classes/CWXMLTranslatorTests.m"; sourceTree = "<group>"; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libCWFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCWFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -118,6 +129,10 @@
 			children = (
 				A6ED913213694ABB002DCEE4 /* CWLocalization.h */,
 				A6ED913313694ABB002DCEE4 /* CWLog.h */,
+				A6ED94E813698284002DCEE4 /* CWXMLTranslation.h */,
+				A6ED94E913698284002DCEE4 /* CWXMLTranslation.m */,
+				A6ED94EA13698284002DCEE4 /* CWXMLTranslator.h */,
+				A6ED94EB13698284002DCEE4 /* CWXMLTranslator.m */,
 				A6ED913413694ABB002DCEE4 /* NSError+CWAdditions.h */,
 				A6ED913513694ABB002DCEE4 /* NSError+CWAdditions.m */,
 				A6ED943813697EAE002DCEE4 /* CWFileURLFromDataTransformer.h */,
@@ -137,6 +152,8 @@
 		A63D5B021339E86A005D6725 /* Test Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A6ED94F6136982AF002DCEE4 /* CWXMLTranslatorTests.h */,
+				A6ED94F7136982AF002DCEE4 /* CWXMLTranslatorTests.m */,
 				A6ED915013694AD8002DCEE4 /* UnitTests-Info.plist */,
 				A6ED914613694AC9002DCEE4 /* NSInvocationVariableArgumentsTest.h */,
 				A6ED914713694AC9002DCEE4 /* NSInvocationVariableArgumentsTest.m */,
@@ -167,6 +184,8 @@
 				A6ED914813694AC9002DCEE4 /* NSInvocationVariableArgumentsTest.h in Headers */,
 				A6ED943A13697EAE002DCEE4 /* NSURLLoadingSystem+CWAdditions.h in Headers */,
 				A6ED943C13697EAE002DCEE4 /* CWFileURLFromDataTransformer.h in Headers */,
+				A6ED94EC13698284002DCEE4 /* CWXMLTranslation.h in Headers */,
+				A6ED94EE13698284002DCEE4 /* CWXMLTranslator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6ED915813694B29002DCEE4 /* NSInvocationVariableArgumentsTest.m in Sources */,
+				A6ED94F8136982AF002DCEE4 /* CWXMLTranslatorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +300,8 @@
 				A6ED914513694ABB002DCEE4 /* NSOperationQueue+CWReplaceOperation.m in Sources */,
 				A6ED943B13697EAE002DCEE4 /* NSURLLoadingSystem+CWAdditions.m in Sources */,
 				A6ED943D13697EAE002DCEE4 /* CWFileURLFromDataTransformer.m in Sources */,
+				A6ED94ED13698284002DCEE4 /* CWXMLTranslation.m in Sources */,
+				A6ED94EF13698284002DCEE4 /* CWXMLTranslator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
