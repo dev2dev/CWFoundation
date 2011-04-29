@@ -9,11 +9,10 @@
 /* Begin PBXBuildFile section */
 		A6A971721369B20D0065D9BE /* CWNetworkMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = A6A971701369B20D0065D9BE /* CWNetworkMonitor.h */; };
 		A6A971731369B20D0065D9BE /* CWNetworkMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A971711369B20D0065D9BE /* CWNetworkMonitor.m */; };
-		A6A971761369B2550065D9BE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A971751369B2550065D9BE /* SystemConfiguration.framework */; };
+		A6A971761369B2550065D9BE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A971751369B2550065D9BE /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		A6A9717B1369B26C0065D9BE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A971751369B2550065D9BE /* SystemConfiguration.framework */; };
 		A6A971A01369B2F40065D9BE /* libCWFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libCWFoundation.a */; };
 		A6A971A11369B2F40065D9BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
-		A6A971A21369B2F40065D9BE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A971751369B2550065D9BE /* SystemConfiguration.framework */; };
 		A6A971A41369B2F40065D9BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A971A31369B2F40065D9BE /* UIKit.framework */; };
 		A6A971AB1369B30C0065D9BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A971A61369B30C0065D9BE /* main.m */; };
 		A6A971AC1369B30C0065D9BE /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6A971A71369B30C0065D9BE /* MainWindow.xib */; };
@@ -27,6 +26,7 @@
 		A6A971DC1369B4790065D9BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		A6A971DD1369B4790065D9BE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A971751369B2550065D9BE /* SystemConfiguration.framework */; };
 		A6A971DE1369B4790065D9BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A971A31369B2F40065D9BE /* UIKit.framework */; };
+		A6A9758C136AC10A0065D9BE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A971751369B2550065D9BE /* SystemConfiguration.framework */; };
 		A6ED913C13694ABB002DCEE4 /* CWLocalization.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED913213694ABB002DCEE4 /* CWLocalization.h */; };
 		A6ED913D13694ABB002DCEE4 /* CWLog.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED913313694ABB002DCEE4 /* CWLog.h */; };
 		A6ED913E13694ABB002DCEE4 /* NSError+CWAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED913413694ABB002DCEE4 /* NSError+CWAdditions.h */; };
@@ -58,14 +58,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D /* CWFoundation */;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = CWFoundation;
 		};
 		A6A971D91369B4010065D9BE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D /* CWFoundation */;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = CWFoundation;
 		};
 		A6ED915413694AE0002DCEE4 /* PBXContainerItemProxy */ = {
@@ -97,6 +97,7 @@
 		A6A971D01369B3ED0065D9BE /* SampleAppAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = SampleAppAppDelegate.h; sourceTree = "<group>"; };
 		A6A971D11369B3ED0065D9BE /* SampleAppAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = SampleAppAppDelegate.m; sourceTree = "<group>"; };
 		A6A971D21369B3ED0065D9BE /* XMLTranslatorSampleApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.plist.xml; path = "XMLTranslatorSampleApp-Info.plist"; sourceTree = "<group>"; };
+		A6A9754B136ABD770065D9BE /* CWFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CWFoundation.h; path = Classes/CWFoundation.h; sourceTree = "<group>"; };
 		A6ED906F1369473E002DCEE4 /* README */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		A6ED913213694ABB002DCEE4 /* CWLocalization.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = CWLocalization.h; path = Classes/CWLocalization.h; sourceTree = "<group>"; };
 		A6ED913313694ABB002DCEE4 /* CWLog.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = CWLog.h; path = Classes/CWLog.h; sourceTree = "<group>"; };
@@ -133,8 +134,8 @@
 			files = (
 				A6A971A01369B2F40065D9BE /* libCWFoundation.a in Frameworks */,
 				A6A971A11369B2F40065D9BE /* Foundation.framework in Frameworks */,
-				A6A971A21369B2F40065D9BE /* SystemConfiguration.framework in Frameworks */,
 				A6A971A41369B2F40065D9BE /* UIKit.framework in Frameworks */,
+				A6A9758C136AC10A0065D9BE /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +209,9 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A6A9754B136ABD770065D9BE /* CWFoundation.h */,
+				A6ED943813697EAE002DCEE4 /* CWFileURLFromDataTransformer.h */,
+				A6ED943913697EAE002DCEE4 /* CWFileURLFromDataTransformer.m */,
 				A6ED913213694ABB002DCEE4 /* CWLocalization.h */,
 				A6ED913313694ABB002DCEE4 /* CWLog.h */,
 				A6A971701369B20D0065D9BE /* CWNetworkMonitor.h */,
@@ -218,8 +222,6 @@
 				A6ED94EB13698284002DCEE4 /* CWXMLTranslator.m */,
 				A6ED913413694ABB002DCEE4 /* NSError+CWAdditions.h */,
 				A6ED913513694ABB002DCEE4 /* NSError+CWAdditions.m */,
-				A6ED943813697EAE002DCEE4 /* CWFileURLFromDataTransformer.h */,
-				A6ED943913697EAE002DCEE4 /* CWFileURLFromDataTransformer.m */,
 				A6ED913613694ABB002DCEE4 /* NSInvocation+CWVariableArguments.h */,
 				A6ED913713694ABB002DCEE4 /* NSInvocation+CWVariableArguments.m */,
 				A6ED913813694ABB002DCEE4 /* NSOperationQueue+CWDefaultQueue.h */,
@@ -585,6 +587,7 @@
 				INFOPLIST_FILE = "Sample Classes/NetworkMonitor/NetworkMonitorSampleApp-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				OTHER_LDFLAGS = (
+					"-all_load",
 					"-framework",
 					Foundation,
 					"-framework",
@@ -609,6 +612,7 @@
 				INFOPLIST_FILE = "Sample Classes/NetworkMonitor/NetworkMonitorSampleApp-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				OTHER_LDFLAGS = (
+					"-all_load",
 					"-framework",
 					Foundation,
 					"-framework",
@@ -634,6 +638,7 @@
 				INFOPLIST_FILE = "Sample Classes/XMLTranslator/XMLTranslatorSampleApp-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				OTHER_LDFLAGS = (
+					"-all_load",
 					"-framework",
 					Foundation,
 					"-framework",
@@ -658,6 +663,7 @@
 				INFOPLIST_FILE = "Sample Classes/XMLTranslator/XMLTranslatorSampleApp-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				OTHER_LDFLAGS = (
+					"-all_load",
 					"-framework",
 					Foundation,
 					"-framework",

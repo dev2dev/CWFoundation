@@ -13,6 +13,25 @@ You add this project as a sub project in Xcode like this:
 4. Add <Path To CWFoundation>/** to user header search paths.
 5. Add -all_load to other linker flags.
 
+You must link against:
+* Foundation.framework
+* SystemConfiguration.framework
+
+
+Functionality
+=============
+
+The public headerfiles are the official source of documentation. This section
+only describes a subset of the funcationality.
+
+* CWLog - Conditional logging replacing NSLog.
+* CWNetworkMonitor - An improved Reachability class.
+* CWXMLTranslator - Utility for transforming XML into domain objects.
+* NSError - Convinience additions for creating localized errors.
+* NSInvocation - Convinience additions for creating invocation instances.
+* NSOPerationQueue - Adds a default queueu, and more.
+* NSFileURLFromDataTransformer - Store relative file URLs in Core Data.
+
 
 Licence
 =======
@@ -22,7 +41,7 @@ The intent and purpose for this licence is that you are free to use CWFoundation
 for any purpose as long as you give attribution.
 
 
-Copyright (c) 2011, Jayway AB All rights reserved.
+Copyright (c) 2011, Jayway AB, All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
