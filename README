@@ -13,9 +13,8 @@ You add this project as a sub project in Xcode like this:
 4. Add <Path To CWFoundation>/** to user header search paths.
 5. Add -all_load to other linker flags.
 
-You must link against:
-* Foundation.framework
-* SystemConfiguration.framework
+The CWNetworkMonitor target containst an improved version of the Reachability
+sample code, and must be linked against SystemConfiguration.framework.
 
 
 Functionality

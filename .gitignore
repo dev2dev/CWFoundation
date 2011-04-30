@@ -9,3 +9,4 @@ Dependencies/*
 test-reports/*
 *.ipa
 xcuserdata
+*.xcworkspace

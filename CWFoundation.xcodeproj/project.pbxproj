@@ -7,16 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A6A971721369B20D0065D9BE /* CWNetworkMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = A6A971701369B20D0065D9BE /* CWNetworkMonitor.h */; };
-		A6A971731369B20D0065D9BE /* CWNetworkMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A971711369B20D0065D9BE /* CWNetworkMonitor.m */; };
-		A6A971761369B2550065D9BE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A971751369B2550065D9BE /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		A6A9717B1369B26C0065D9BE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A971751369B2550065D9BE /* SystemConfiguration.framework */; };
-		A6A971A01369B2F40065D9BE /* libCWFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libCWFoundation.a */; };
 		A6A971A11369B2F40065D9BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		A6A971A41369B2F40065D9BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A971A31369B2F40065D9BE /* UIKit.framework */; };
-		A6A971AB1369B30C0065D9BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A971A61369B30C0065D9BE /* main.m */; };
-		A6A971AC1369B30C0065D9BE /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6A971A71369B30C0065D9BE /* MainWindow.xib */; };
-		A6A971AE1369B30C0065D9BE /* SampleAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A971AA1369B30C0065D9BE /* SampleAppAppDelegate.m */; };
 		A6A971D31369B3ED0065D9BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A971CB1369B3ED0065D9BE /* main.m */; };
 		A6A971D41369B3ED0065D9BE /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6A971CC1369B3ED0065D9BE /* MainWindow.xib */; };
 		A6A971D51369B3ED0065D9BE /* RSSFeed.xmltranslation in Resources */ = {isa = PBXBuildFile; fileRef = A6A971CD1369B3ED0065D9BE /* RSSFeed.xmltranslation */; };
@@ -27,6 +20,15 @@
 		A6A971DD1369B4790065D9BE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A971751369B2550065D9BE /* SystemConfiguration.framework */; };
 		A6A971DE1369B4790065D9BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A971A31369B2F40065D9BE /* UIKit.framework */; };
 		A6A9758C136AC10A0065D9BE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A971751369B2550065D9BE /* SystemConfiguration.framework */; };
+		A6B254DD136BF9E700D5F57F /* CWNetworkMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = A6A971701369B20D0065D9BE /* CWNetworkMonitor.h */; };
+		A6B254E7136BF9E700D5F57F /* CWNetworkMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A971711369B20D0065D9BE /* CWNetworkMonitor.m */; };
+		A6B254E9136BF9E700D5F57F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		A6B254EA136BF9E700D5F57F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A971751369B2550065D9BE /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		A6B254F1136BFA9F00D5F57F /* libCWNetworkMonitor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6B254EE136BF9E700D5F57F /* libCWNetworkMonitor.a */; };
+		A6B254F7136BFD5100D5F57F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B254F2136BFD5100D5F57F /* main.m */; };
+		A6B254F8136BFD5100D5F57F /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6B254F3136BFD5100D5F57F /* MainWindow.xib */; };
+		A6B254F9136BFD5100D5F57F /* NetworkMonitorSampleApp-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6B254F4136BFD5100D5F57F /* NetworkMonitorSampleApp-Info.plist */; };
+		A6B254FA136BFD5100D5F57F /* SampleAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B254F6136BFD5100D5F57F /* SampleAppAppDelegate.m */; };
 		A6ED913C13694ABB002DCEE4 /* CWLocalization.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED913213694ABB002DCEE4 /* CWLocalization.h */; };
 		A6ED913D13694ABB002DCEE4 /* CWLog.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED913313694ABB002DCEE4 /* CWLog.h */; };
 		A6ED913E13694ABB002DCEE4 /* NSError+CWAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED913413694ABB002DCEE4 /* NSError+CWAdditions.h */; };
@@ -54,19 +56,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A6A9719E1369B2DD0065D9BE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = CWFoundation;
-		};
 		A6A971D91369B4010065D9BE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = CWFoundation;
+		};
+		A6B254EF136BFA5D00D5F57F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6B254D0136BF9E700D5F57F;
+			remoteInfo = CWNetworkMonitor;
 		};
 		A6ED915413694AE0002DCEE4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -83,11 +85,6 @@
 		A6A971751369B2550065D9BE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A6A971981369B2D80065D9BE /* NetworkMonitorSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkMonitorSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6A971A31369B2F40065D9BE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		A6A971A61369B30C0065D9BE /* main.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A6A971A71369B30C0065D9BE /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		A6A971A81369B30C0065D9BE /* NetworkMonitorSampleApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.plist.xml; path = "NetworkMonitorSampleApp-Info.plist"; sourceTree = "<group>"; };
-		A6A971A91369B30C0065D9BE /* SampleAppAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = SampleAppAppDelegate.h; sourceTree = "<group>"; };
-		A6A971AA1369B30C0065D9BE /* SampleAppAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = SampleAppAppDelegate.m; sourceTree = "<group>"; };
 		A6A971C41369B3C90065D9BE /* XMLTranslatorSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMLTranslatorSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6A971CB1369B3ED0065D9BE /* main.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A6A971CC1369B3ED0065D9BE /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
@@ -98,6 +95,12 @@
 		A6A971D11369B3ED0065D9BE /* SampleAppAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = SampleAppAppDelegate.m; sourceTree = "<group>"; };
 		A6A971D21369B3ED0065D9BE /* XMLTranslatorSampleApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.plist.xml; path = "XMLTranslatorSampleApp-Info.plist"; sourceTree = "<group>"; };
 		A6A9754B136ABD770065D9BE /* CWFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CWFoundation.h; path = Classes/CWFoundation.h; sourceTree = "<group>"; };
+		A6B254EE136BF9E700D5F57F /* libCWNetworkMonitor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCWNetworkMonitor.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6B254F2136BFD5100D5F57F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Sample Classes/NetworkMonitor/main.m"; sourceTree = SOURCE_ROOT; };
+		A6B254F3136BFD5100D5F57F /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainWindow.xib; path = "Sample Classes/NetworkMonitor/MainWindow.xib"; sourceTree = SOURCE_ROOT; };
+		A6B254F4136BFD5100D5F57F /* NetworkMonitorSampleApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "NetworkMonitorSampleApp-Info.plist"; path = "Sample Classes/NetworkMonitor/NetworkMonitorSampleApp-Info.plist"; sourceTree = SOURCE_ROOT; };
+		A6B254F5136BFD5100D5F57F /* SampleAppAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleAppAppDelegate.h; path = "Sample Classes/NetworkMonitor/SampleAppAppDelegate.h"; sourceTree = SOURCE_ROOT; };
+		A6B254F6136BFD5100D5F57F /* SampleAppAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleAppAppDelegate.m; path = "Sample Classes/NetworkMonitor/SampleAppAppDelegate.m"; sourceTree = SOURCE_ROOT; };
 		A6ED906F1369473E002DCEE4 /* README */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		A6ED913213694ABB002DCEE4 /* CWLocalization.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = CWLocalization.h; path = Classes/CWLocalization.h; sourceTree = "<group>"; };
 		A6ED913313694ABB002DCEE4 /* CWLog.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = CWLog.h; path = Classes/CWLog.h; sourceTree = "<group>"; };
@@ -132,7 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6A971A01369B2F40065D9BE /* libCWFoundation.a in Frameworks */,
+				A6B254F1136BFA9F00D5F57F /* libCWNetworkMonitor.a in Frameworks */,
 				A6A971A11369B2F40065D9BE /* Foundation.framework in Frameworks */,
 				A6A971A41369B2F40065D9BE /* UIKit.framework in Frameworks */,
 				A6A9758C136AC10A0065D9BE /* SystemConfiguration.framework in Frameworks */,
@@ -147,6 +150,15 @@
 				A6A971DC1369B4790065D9BE /* Foundation.framework in Frameworks */,
 				A6A971DD1369B4790065D9BE /* SystemConfiguration.framework in Frameworks */,
 				A6A971DE1369B4790065D9BE /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6B254E8136BF9E700D5F57F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6B254E9136BF9E700D5F57F /* Foundation.framework in Frameworks */,
+				A6B254EA136BF9E700D5F57F /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,7 +177,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
-				A6A971761369B2550065D9BE /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +190,7 @@
 				A6ED914F13694AD8002DCEE4 /* UnitTests.octest */,
 				A6A971981369B2D80065D9BE /* NetworkMonitorSampleApp.app */,
 				A6A971C41369B3C90065D9BE /* XMLTranslatorSampleApp.app */,
+				A6B254EE136BF9E700D5F57F /* libCWNetworkMonitor.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -258,11 +270,11 @@
 		A6A971A51369B30C0065D9BE /* NetworkMonitor */ = {
 			isa = PBXGroup;
 			children = (
-				A6A971A61369B30C0065D9BE /* main.m */,
-				A6A971A91369B30C0065D9BE /* SampleAppAppDelegate.h */,
-				A6A971AA1369B30C0065D9BE /* SampleAppAppDelegate.m */,
-				A6A971A71369B30C0065D9BE /* MainWindow.xib */,
-				A6A971A81369B30C0065D9BE /* NetworkMonitorSampleApp-Info.plist */,
+				A6B254F2136BFD5100D5F57F /* main.m */,
+				A6B254F3136BFD5100D5F57F /* MainWindow.xib */,
+				A6B254F4136BFD5100D5F57F /* NetworkMonitorSampleApp-Info.plist */,
+				A6B254F5136BFD5100D5F57F /* SampleAppAppDelegate.h */,
+				A6B254F6136BFD5100D5F57F /* SampleAppAppDelegate.m */,
 			);
 			path = NetworkMonitor;
 			sourceTree = "<group>";
@@ -286,6 +298,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		A6B254D1136BF9E700D5F57F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6B254DD136BF9E700D5F57F /* CWNetworkMonitor.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2AAC07A0554694100DB518D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,7 +321,6 @@
 				A6ED943C13697EAE002DCEE4 /* CWFileURLFromDataTransformer.h in Headers */,
 				A6ED94EC13698284002DCEE4 /* CWXMLTranslation.h in Headers */,
 				A6ED94EE13698284002DCEE4 /* CWXMLTranslator.h in Headers */,
-				A6A971721369B20D0065D9BE /* CWNetworkMonitor.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +338,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				A6A9719F1369B2DD0065D9BE /* PBXTargetDependency */,
+				A6B254F0136BFA5D00D5F57F /* PBXTargetDependency */,
 			);
 			name = NetworkMonitorSampleApp;
 			productName = NetworkMonitorSampleApp;
@@ -343,6 +362,23 @@
 			productName = XMLTranslatorSampleApp;
 			productReference = A6A971C41369B3C90065D9BE /* XMLTranslatorSampleApp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		A6B254D0136BF9E700D5F57F /* CWNetworkMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6B254EB136BF9E700D5F57F /* Build configuration list for PBXNativeTarget "CWNetworkMonitor" */;
+			buildPhases = (
+				A6B254D1136BF9E700D5F57F /* Headers */,
+				A6B254DE136BF9E700D5F57F /* Sources */,
+				A6B254E8136BF9E700D5F57F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CWNetworkMonitor;
+			productName = CWFoundation;
+			productReference = A6B254EE136BF9E700D5F57F /* libCWNetworkMonitor.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 		A6ED914E13694AD8002DCEE4 /* UnitTests */ = {
 			isa = PBXNativeTarget;
@@ -401,6 +437,7 @@
 			projectRoot = "";
 			targets = (
 				D2AAC07D0554694100DB518D /* CWFoundation */,
+				A6B254D0136BF9E700D5F57F /* CWNetworkMonitor */,
 				A6ED914E13694AD8002DCEE4 /* UnitTests */,
 				A6A971971369B2D80065D9BE /* NetworkMonitorSampleApp */,
 				A6A971C31369B3C90065D9BE /* XMLTranslatorSampleApp */,
@@ -413,7 +450,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6A971AC1369B30C0065D9BE /* MainWindow.xib in Resources */,
+				A6B254F8136BFD5100D5F57F /* MainWindow.xib in Resources */,
+				A6B254F9136BFD5100D5F57F /* NetworkMonitorSampleApp-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,8 +494,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6A971AB1369B30C0065D9BE /* main.m in Sources */,
-				A6A971AE1369B30C0065D9BE /* SampleAppAppDelegate.m in Sources */,
+				A6B254F7136BFD5100D5F57F /* main.m in Sources */,
+				A6B254FA136BFD5100D5F57F /* SampleAppAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +506,14 @@
 				A6A971D31369B3ED0065D9BE /* main.m in Sources */,
 				A6A971D61369B3ED0065D9BE /* RSSFeedTableViewController.m in Sources */,
 				A6A971D71369B3ED0065D9BE /* SampleAppAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6B254DE136BF9E700D5F57F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6B254E7136BF9E700D5F57F /* CWNetworkMonitor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,22 +538,21 @@
 				A6ED943D13697EAE002DCEE4 /* CWFileURLFromDataTransformer.m in Sources */,
 				A6ED94ED13698284002DCEE4 /* CWXMLTranslation.m in Sources */,
 				A6ED94EF13698284002DCEE4 /* CWXMLTranslator.m in Sources */,
-				A6A971731369B20D0065D9BE /* CWNetworkMonitor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A6A9719F1369B2DD0065D9BE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D2AAC07D0554694100DB518D /* CWFoundation */;
-			targetProxy = A6A9719E1369B2DD0065D9BE /* PBXContainerItemProxy */;
-		};
 		A6A971DA1369B4010065D9BE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D2AAC07D0554694100DB518D /* CWFoundation */;
 			targetProxy = A6A971D91369B4010065D9BE /* PBXContainerItemProxy */;
+		};
+		A6B254F0136BFA5D00D5F57F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6B254D0136BF9E700D5F57F /* CWNetworkMonitor */;
+			targetProxy = A6B254EF136BFA5D00D5F57F /* PBXContainerItemProxy */;
 		};
 		A6ED915513694AE0002DCEE4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -676,6 +721,38 @@
 			};
 			name = Release;
 		};
+		A6B254EC136BF9E700D5F57F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/CWFoundation.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = CWNetworkMonitor;
+				VERSION_INFO_BUILDER = CWNetworkMonitor;
+			};
+			name = Debug;
+		};
+		A6B254ED136BF9E700D5F57F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/CWFoundation.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = CWNetworkMonitor;
+				VERSION_INFO_BUILDER = CWNetworkMonitor;
+			};
+			name = Release;
+		};
 		A6ED915113694AD8002DCEE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -773,6 +850,15 @@
 			buildConfigurations = (
 				A6A971C71369B3CA0065D9BE /* Debug */,
 				A6A971C81369B3CA0065D9BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6B254EB136BF9E700D5F57F /* Build configuration list for PBXNativeTarget "CWNetworkMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6B254EC136BF9E700D5F57F /* Debug */,
+				A6B254ED136BF9E700D5F57F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

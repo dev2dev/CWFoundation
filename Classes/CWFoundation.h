@@ -1,5 +1,5 @@
 //
-//  SampleAppAppDelegate.h
+//  CWFoundation.h
 //  CWFoundation
 //  Created by Fredrik Olsson 
 //
@@ -28,15 +28,14 @@
 //  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
-#import <UIKit/UIKit.h>
-
-@interface SampleAppAppDelegate : NSObject <UIApplicationDelegate> {
-    UIWindow *window;
-    UILabel* label;
-}
-
-@property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet UILabel *label;
-
-@end
-
+#import "CWFileURLFromDataTransformer.h"
+#import "CWLocalization.h"
+#import "CWLog.h"
+#import "CWNetworkMonitor.h"
+#import "CWXMLTranslation.h"
+#import "CWXMLTranslator.h"
+#import "NSError+CWAdditions.h"
+#import "NSInvocation+CWVariableArguments.h"
+#import "NSOperationQueue+CWDefaultQueue.h"
+#import "NSOperationQueue+CWReplaceOperation.h"
+#import "NSURLLoadingSystem+CWAdditions.h"
