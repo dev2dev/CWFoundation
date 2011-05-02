@@ -276,7 +276,8 @@
 				A6B254F5136BFD5100D5F57F /* SampleAppAppDelegate.h */,
 				A6B254F6136BFD5100D5F57F /* SampleAppAppDelegate.m */,
 			);
-			path = NetworkMonitor;
+			name = NetworkMonitor;
+			path = "Sample Classes/NetworkMonitor";
 			sourceTree = "<group>";
 		};
 		A6A971CA1369B3ED0065D9BE /* XMLTranslator */ = {
