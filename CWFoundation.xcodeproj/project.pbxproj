@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A61083BB136ECE2F00D42782 /* CWOrderedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = A61083AF136ECE2F00D42782 /* CWOrderedDictionary.h */; };
+		A61083BC136ECE2F00D42782 /* CWOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = A61083B0136ECE2F00D42782 /* CWOrderedDictionary.m */; };
+		A61083BD136ECE2F00D42782 /* NSArray+CWSortedInsert.h in Headers */ = {isa = PBXBuildFile; fileRef = A61083B1136ECE2F00D42782 /* NSArray+CWSortedInsert.h */; };
+		A61083BE136ECE2F00D42782 /* NSArray+CWSortedInsert.m in Sources */ = {isa = PBXBuildFile; fileRef = A61083B2136ECE2F00D42782 /* NSArray+CWSortedInsert.m */; };
+		A61083BF136ECE2F00D42782 /* NSData+CWBase64Encoding.h in Headers */ = {isa = PBXBuildFile; fileRef = A61083B3136ECE2F00D42782 /* NSData+CWBase64Encoding.h */; };
+		A61083C0136ECE2F00D42782 /* NSData+CWBase64Encoding.m in Sources */ = {isa = PBXBuildFile; fileRef = A61083B4136ECE2F00D42782 /* NSData+CWBase64Encoding.m */; };
+		A61083C1136ECE2F00D42782 /* NSDate+CWAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A61083B5136ECE2F00D42782 /* NSDate+CWAdditions.h */; };
+		A61083C2136ECE2F00D42782 /* NSDate+CWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A61083B6136ECE2F00D42782 /* NSDate+CWAdditions.m */; };
+		A61083C3136ECE2F00D42782 /* NSObject+CWAssociatedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = A61083B7136ECE2F00D42782 /* NSObject+CWAssociatedObject.h */; };
+		A61083C4136ECE2F00D42782 /* NSObject+CWAssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A61083B8136ECE2F00D42782 /* NSObject+CWAssociatedObject.m */; };
+		A61083C5136ECE2F00D42782 /* NSString+CWPrefixAndSuffix.h in Headers */ = {isa = PBXBuildFile; fileRef = A61083B9136ECE2F00D42782 /* NSString+CWPrefixAndSuffix.h */; };
+		A61083C6136ECE2F00D42782 /* NSString+CWPrefixAndSuffix.m in Sources */ = {isa = PBXBuildFile; fileRef = A61083BA136ECE2F00D42782 /* NSString+CWPrefixAndSuffix.m */; };
+		A61083CF136ECFA100D42782 /* CWOrderedDictionaryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A61083CA136ECFA100D42782 /* CWOrderedDictionaryTest.m */; };
+		A61083D0136ECFA100D42782 /* NSObjectAssociatedObjectsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A61083CC136ECFA100D42782 /* NSObjectAssociatedObjectsTest.m */; };
+		A61083D1136ECFA100D42782 /* NSStringCWPrefixAndSuffixTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A61083CE136ECFA100D42782 /* NSStringCWPrefixAndSuffixTests.m */; };
 		A6A9717B1369B26C0065D9BE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A971751369B2550065D9BE /* SystemConfiguration.framework */; };
 		A6A971A11369B2F40065D9BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		A6A971A41369B2F40065D9BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A971A31369B2F40065D9BE /* UIKit.framework */; };
@@ -80,6 +95,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A61083AF136ECE2F00D42782 /* CWOrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = CWOrderedDictionary.h; path = Classes/CWOrderedDictionary.h; sourceTree = "<group>"; };
+		A61083B0136ECE2F00D42782 /* CWOrderedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = CWOrderedDictionary.m; path = Classes/CWOrderedDictionary.m; sourceTree = "<group>"; };
+		A61083B1136ECE2F00D42782 /* NSArray+CWSortedInsert.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = "NSArray+CWSortedInsert.h"; path = "Classes/NSArray+CWSortedInsert.h"; sourceTree = "<group>"; };
+		A61083B2136ECE2F00D42782 /* NSArray+CWSortedInsert.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "NSArray+CWSortedInsert.m"; path = "Classes/NSArray+CWSortedInsert.m"; sourceTree = "<group>"; };
+		A61083B3136ECE2F00D42782 /* NSData+CWBase64Encoding.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = "NSData+CWBase64Encoding.h"; path = "Classes/NSData+CWBase64Encoding.h"; sourceTree = "<group>"; };
+		A61083B4136ECE2F00D42782 /* NSData+CWBase64Encoding.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "NSData+CWBase64Encoding.m"; path = "Classes/NSData+CWBase64Encoding.m"; sourceTree = "<group>"; };
+		A61083B5136ECE2F00D42782 /* NSDate+CWAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = "NSDate+CWAdditions.h"; path = "Classes/NSDate+CWAdditions.h"; sourceTree = "<group>"; };
+		A61083B6136ECE2F00D42782 /* NSDate+CWAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "NSDate+CWAdditions.m"; path = "Classes/NSDate+CWAdditions.m"; sourceTree = "<group>"; };
+		A61083B7136ECE2F00D42782 /* NSObject+CWAssociatedObject.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = "NSObject+CWAssociatedObject.h"; path = "Classes/NSObject+CWAssociatedObject.h"; sourceTree = "<group>"; };
+		A61083B8136ECE2F00D42782 /* NSObject+CWAssociatedObject.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "NSObject+CWAssociatedObject.m"; path = "Classes/NSObject+CWAssociatedObject.m"; sourceTree = "<group>"; };
+		A61083B9136ECE2F00D42782 /* NSString+CWPrefixAndSuffix.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = "NSString+CWPrefixAndSuffix.h"; path = "Classes/NSString+CWPrefixAndSuffix.h"; sourceTree = "<group>"; };
+		A61083BA136ECE2F00D42782 /* NSString+CWPrefixAndSuffix.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "NSString+CWPrefixAndSuffix.m"; path = "Classes/NSString+CWPrefixAndSuffix.m"; sourceTree = "<group>"; };
+		A61083C9136ECFA100D42782 /* CWOrderedDictionaryTest.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = CWOrderedDictionaryTest.h; path = "Test Classes/CWOrderedDictionaryTest.h"; sourceTree = "<group>"; };
+		A61083CA136ECFA100D42782 /* CWOrderedDictionaryTest.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = CWOrderedDictionaryTest.m; path = "Test Classes/CWOrderedDictionaryTest.m"; sourceTree = "<group>"; };
+		A61083CB136ECFA100D42782 /* NSObjectAssociatedObjectsTest.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = NSObjectAssociatedObjectsTest.h; path = "Test Classes/NSObjectAssociatedObjectsTest.h"; sourceTree = "<group>"; };
+		A61083CC136ECFA100D42782 /* NSObjectAssociatedObjectsTest.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = NSObjectAssociatedObjectsTest.m; path = "Test Classes/NSObjectAssociatedObjectsTest.m"; sourceTree = "<group>"; };
+		A61083CD136ECFA100D42782 /* NSStringCWPrefixAndSuffixTests.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = NSStringCWPrefixAndSuffixTests.h; path = "Test Classes/NSStringCWPrefixAndSuffixTests.h"; sourceTree = "<group>"; };
+		A61083CE136ECFA100D42782 /* NSStringCWPrefixAndSuffixTests.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = NSStringCWPrefixAndSuffixTests.m; path = "Test Classes/NSStringCWPrefixAndSuffixTests.m"; sourceTree = "<group>"; };
 		A6A971701369B20D0065D9BE /* CWNetworkMonitor.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = CWNetworkMonitor.h; path = Classes/CWNetworkMonitor.h; sourceTree = "<group>"; };
 		A6A971711369B20D0065D9BE /* CWNetworkMonitor.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = CWNetworkMonitor.m; path = Classes/CWNetworkMonitor.m; sourceTree = "<group>"; };
 		A6A971751369B2550065D9BE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -228,18 +261,30 @@
 				A6ED913313694ABB002DCEE4 /* CWLog.h */,
 				A6A971701369B20D0065D9BE /* CWNetworkMonitor.h */,
 				A6A971711369B20D0065D9BE /* CWNetworkMonitor.m */,
+				A61083AF136ECE2F00D42782 /* CWOrderedDictionary.h */,
+				A61083B0136ECE2F00D42782 /* CWOrderedDictionary.m */,
 				A6ED94E813698284002DCEE4 /* CWXMLTranslation.h */,
 				A6ED94E913698284002DCEE4 /* CWXMLTranslation.m */,
 				A6ED94EA13698284002DCEE4 /* CWXMLTranslator.h */,
 				A6ED94EB13698284002DCEE4 /* CWXMLTranslator.m */,
+				A61083B1136ECE2F00D42782 /* NSArray+CWSortedInsert.h */,
+				A61083B2136ECE2F00D42782 /* NSArray+CWSortedInsert.m */,
+				A61083B3136ECE2F00D42782 /* NSData+CWBase64Encoding.h */,
+				A61083B4136ECE2F00D42782 /* NSData+CWBase64Encoding.m */,
+				A61083B5136ECE2F00D42782 /* NSDate+CWAdditions.h */,
+				A61083B6136ECE2F00D42782 /* NSDate+CWAdditions.m */,
 				A6ED913413694ABB002DCEE4 /* NSError+CWAdditions.h */,
 				A6ED913513694ABB002DCEE4 /* NSError+CWAdditions.m */,
 				A6ED913613694ABB002DCEE4 /* NSInvocation+CWVariableArguments.h */,
 				A6ED913713694ABB002DCEE4 /* NSInvocation+CWVariableArguments.m */,
+				A61083B7136ECE2F00D42782 /* NSObject+CWAssociatedObject.h */,
+				A61083B8136ECE2F00D42782 /* NSObject+CWAssociatedObject.m */,
 				A6ED913813694ABB002DCEE4 /* NSOperationQueue+CWDefaultQueue.h */,
 				A6ED913913694ABB002DCEE4 /* NSOperationQueue+CWDefaultQueue.m */,
 				A6ED913A13694ABB002DCEE4 /* NSOperationQueue+CWReplaceOperation.h */,
 				A6ED913B13694ABB002DCEE4 /* NSOperationQueue+CWReplaceOperation.m */,
+				A61083B9136ECE2F00D42782 /* NSString+CWPrefixAndSuffix.h */,
+				A61083BA136ECE2F00D42782 /* NSString+CWPrefixAndSuffix.m */,
 				A6ED943613697EAE002DCEE4 /* NSURLLoadingSystem+CWAdditions.h */,
 				A6ED943713697EAE002DCEE4 /* NSURLLoadingSystem+CWAdditions.m */,
 			);
@@ -249,10 +294,16 @@
 		A63D5B021339E86A005D6725 /* Test Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A61083C9136ECFA100D42782 /* CWOrderedDictionaryTest.h */,
+				A61083CA136ECFA100D42782 /* CWOrderedDictionaryTest.m */,
 				A6ED94F6136982AF002DCEE4 /* CWXMLTranslatorTests.h */,
 				A6ED94F7136982AF002DCEE4 /* CWXMLTranslatorTests.m */,
 				A6ED914613694AC9002DCEE4 /* NSInvocationVariableArgumentsTest.h */,
 				A6ED914713694AC9002DCEE4 /* NSInvocationVariableArgumentsTest.m */,
+				A61083CB136ECFA100D42782 /* NSObjectAssociatedObjectsTest.h */,
+				A61083CC136ECFA100D42782 /* NSObjectAssociatedObjectsTest.m */,
+				A61083CD136ECFA100D42782 /* NSStringCWPrefixAndSuffixTests.h */,
+				A61083CE136ECFA100D42782 /* NSStringCWPrefixAndSuffixTests.m */,
 				A6ED915013694AD8002DCEE4 /* UnitTests-Info.plist */,
 			);
 			name = "Test Classes";
@@ -322,6 +373,12 @@
 				A6ED943C13697EAE002DCEE4 /* CWFileURLFromDataTransformer.h in Headers */,
 				A6ED94EC13698284002DCEE4 /* CWXMLTranslation.h in Headers */,
 				A6ED94EE13698284002DCEE4 /* CWXMLTranslator.h in Headers */,
+				A61083BB136ECE2F00D42782 /* CWOrderedDictionary.h in Headers */,
+				A61083BD136ECE2F00D42782 /* NSArray+CWSortedInsert.h in Headers */,
+				A61083BF136ECE2F00D42782 /* NSData+CWBase64Encoding.h in Headers */,
+				A61083C1136ECE2F00D42782 /* NSDate+CWAdditions.h in Headers */,
+				A61083C3136ECE2F00D42782 /* NSObject+CWAssociatedObject.h in Headers */,
+				A61083C5136ECE2F00D42782 /* NSString+CWPrefixAndSuffix.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +581,9 @@
 			files = (
 				A6ED915813694B29002DCEE4 /* NSInvocationVariableArgumentsTest.m in Sources */,
 				A6ED94F8136982AF002DCEE4 /* CWXMLTranslatorTests.m in Sources */,
+				A61083CF136ECFA100D42782 /* CWOrderedDictionaryTest.m in Sources */,
+				A61083D0136ECFA100D42782 /* NSObjectAssociatedObjectsTest.m in Sources */,
+				A61083D1136ECFA100D42782 /* NSStringCWPrefixAndSuffixTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +599,12 @@
 				A6ED943D13697EAE002DCEE4 /* CWFileURLFromDataTransformer.m in Sources */,
 				A6ED94ED13698284002DCEE4 /* CWXMLTranslation.m in Sources */,
 				A6ED94EF13698284002DCEE4 /* CWXMLTranslator.m in Sources */,
+				A61083BC136ECE2F00D42782 /* CWOrderedDictionary.m in Sources */,
+				A61083BE136ECE2F00D42782 /* NSArray+CWSortedInsert.m in Sources */,
+				A61083C0136ECE2F00D42782 /* NSData+CWBase64Encoding.m in Sources */,
+				A61083C2136ECE2F00D42782 /* NSDate+CWAdditions.m in Sources */,
+				A61083C4136ECE2F00D42782 /* NSObject+CWAssociatedObject.m in Sources */,
+				A61083C6136ECE2F00D42782 /* NSString+CWPrefixAndSuffix.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

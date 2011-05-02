@@ -1,5 +1,5 @@
 //
-//  CWLocalization.h
+//  NSStringCWPrefixAndSuffixTests.h
 //  CWFoundation
 //  Created by Fredrik Olsson 
 //
@@ -28,11 +28,22 @@
 //  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
-#import <Foundation/Foundation.h>
 
-#define CWLocalizedStringFromTableInBundleNamed(key, tbl, bundleName) \
-	NSLocalizedStringFromTableInBundle((key), \
-                                       (tbl), \
-                                       [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:(bundleName) \
-                                                                                                ofType:@"bundle"]], \
-                                       nil)
+#import <SenTestingKit/SenTestingKit.h>
+#import <UIKit/UIKit.h>
+
+#import "NSString+CWPrefixAndSuffix.h"
+
+
+@interface NSStringCWPrefixAndSuffixTests : SenTestCase {
+
+}
+
+-(void)testCommonPrefixRangeFound;
+-(void)testCommonPrefixRangeNotFound;
+-(void)testCommonSuffixRangeFound;
+-(void)testCommonSuffixRangeNotFound;
+
+-(void)testNonCommonPrefixAndSuffixFound;
+
+@end

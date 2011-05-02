@@ -1,5 +1,5 @@
 //
-//  CWLocalization.h
+//  NSString+CWPrefixAndSuffix.h
 //  CWFoundation
 //  Created by Fredrik Olsson 
 //
@@ -30,9 +30,12 @@
 
 #import <Foundation/Foundation.h>
 
-#define CWLocalizedStringFromTableInBundleNamed(key, tbl, bundleName) \
-	NSLocalizedStringFromTableInBundle((key), \
-                                       (tbl), \
-                                       [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:(bundleName) \
-                                                                                                ofType:@"bundle"]], \
-                                       nil)
+
+@interface NSString (CWPrefixAndSuffix)
+
+-(NSUInteger)lengthOfCommonPrefixWithString:(NSString*)string;
+-(NSUInteger)lengthOfCommonSuffixWithString:(NSString*)string;
+
+-(NSRange)rangeOfNonCommonPrefixAndSuffixWithString:(NSString*)string;
+
+@end

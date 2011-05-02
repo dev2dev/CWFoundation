@@ -12,7 +12,7 @@
 //     * Redistributions in binary form must reproduce the above copyright
 //       notice, this list of conditions and the following disclaimer in the
 //       documentation and/or other materials provided with the distribution.
-//     * Neither the name of the Jayway nor the names of its contributors may 
+//     * Neither the name of Jayway AB nor the names of its contributors may 
 //       be used to endorse or promote products derived from this software 
 //       without specific prior written permission.
 //
@@ -39,10 +39,10 @@
         if (userAgent == nil) {
             NSString* appName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleName"];
             NSString* appVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
-            id device = [NSClassFromString(@"UIDevice") currentDevice];
-            NSString* deviceName = (id)[device model];
-            NSString* osName = (id)[device systemName];
-            NSString* osVersion = (id)[device systemVersion];
+            id device = [NSClassFromString(@"UIDevice") performSelector:@selector(currentDevice)];
+            NSString* deviceName = (id)[device performSelector:@selector(model)];
+            NSString* osName = (id)[device performSelector:@selector(systemName)];
+            NSString* osVersion = (id)[device performSelector:@selector(systemVersion)];
             userAgent = [[NSString alloc] initWithFormat:@"%@/%@ (%@; %@ %@)", 
                          appName, appVersion, deviceName, osName, osVersion];
         }

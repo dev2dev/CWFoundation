@@ -1,5 +1,5 @@
 //
-//  CWLocalization.h
+//  NSObjectAssociatedObjectsTest.h
 //  CWFoundation
 //  Created by Fredrik Olsson 
 //
@@ -28,11 +28,17 @@
 //  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
-#import <Foundation/Foundation.h>
+#import <SenTestingKit/SenTestingKit.h>
 
-#define CWLocalizedStringFromTableInBundleNamed(key, tbl, bundleName) \
-	NSLocalizedStringFromTableInBundle((key), \
-                                       (tbl), \
-                                       [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:(bundleName) \
-                                                                                                ofType:@"bundle"]], \
-                                       nil)
+#define CW_FORCE_LEGACY_ASSOCIATED_OBJECTS 1
+
+@interface NSObjectAssociatedObjectsTest : SenTestCase {
+    id object;
+    id associatedObject;
+}
+
+-(void)testAssociatedObjectsAssignPolicy;
+-(void)testAssociatedObjectsCopyPolicy;
+-(void)testAssociatedObjectsRetainPolicy;
+
+@end

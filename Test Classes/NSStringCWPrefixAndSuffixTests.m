@@ -1,5 +1,5 @@
 //
-//  CWLocalization.h
+//  NSStringCWPrefixAndSuffixTests.m
 //  CWFoundation
 //  Created by Fredrik Olsson 
 //
@@ -28,11 +28,37 @@
 //  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
-#import <Foundation/Foundation.h>
+#import "NSStringCWPrefixAndSuffixTests.h"
 
-#define CWLocalizedStringFromTableInBundleNamed(key, tbl, bundleName) \
-	NSLocalizedStringFromTableInBundle((key), \
-                                       (tbl), \
-                                       [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:(bundleName) \
-                                                                                                ofType:@"bundle"]], \
-                                       nil)
+
+@implementation NSStringCWPrefixAndSuffixTests
+
+-(void)testCommonPrefixRangeFound;
+{
+	STAssertEquals(1u, [@"AB" lengthOfCommonPrefixWithString:@"AC"], @"Prefix not found");
+}
+
+-(void)testCommonPrefixRangeNotFound;
+{
+	STAssertEquals(0u, [@"AB" lengthOfCommonPrefixWithString:@"BC"], @"Prefix found");
+}
+
+-(void)testCommonSuffixRangeFound;
+{
+	STAssertEquals(1u, [@"AB" lengthOfCommonSuffixWithString:@"CB"], @"Suffix not found");
+}
+
+-(void)testCommonSuffixRangeNotFound;
+{
+	STAssertEquals(0u, [@"AB" lengthOfCommonSuffixWithString:@"CD"], @"Suffix found");
+}
+
+-(void)testNonCommonPrefixAndSuffixFound;
+{
+	STAssertEquals(NSMakeRange(1, 1), [@"ABC" rangeOfNonCommonPrefixAndSuffixWithString:@"ADC"], @"Equal length uncommon not found.");
+	STAssertEquals(NSMakeRange(1, 0), [@"AC" rangeOfNonCommonPrefixAndSuffixWithString:@"ADC"], @"Missing in receiver not found");
+	STAssertEquals(NSMakeRange(1, 1), [@"ABC" rangeOfNonCommonPrefixAndSuffixWithString:@"AC"], @"Missing in argument not found");
+}
+
+
+@end

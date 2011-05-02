@@ -1,5 +1,5 @@
 //
-//  CWLocalization.h
+//  NSArray+CWSortedInsert.h
 //  CWFoundation
 //  Created by Fredrik Olsson 
 //
@@ -30,9 +30,21 @@
 
 #import <Foundation/Foundation.h>
 
-#define CWLocalizedStringFromTableInBundleNamed(key, tbl, bundleName) \
-	NSLocalizedStringFromTableInBundle((key), \
-                                       (tbl), \
-                                       [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:(bundleName) \
-                                                                                                ofType:@"bundle"]], \
-                                       nil)
+
+@interface NSArray (CWSortedInsert)
+
+-(NSUInteger)indexForInsertingObject:(id)anObject sortedUsingfunction:(NSInteger (*)(id, id, void *))compare context:(void*)context;
+-(NSUInteger)indexForInsertingObject:(id)anObject sortedUsingSelector:(SEL)aSelector;
+-(NSUInteger)indexForInsertingObject:(id)anObject sortedUsingDescriptors:(NSArray*)descriptors;
+
+@end
+
+
+@interface NSMutableArray (CWSortedInsert)
+
+-(void)insertObject:(id)anObject sortedUsingfunction:(NSInteger (*)(id, id, void *))compare context:(void*)context;
+-(void)insertObject:(id)anObject sortedUsingSelector:(SEL)aSelector;
+-(void)insertObject:(id)anObject sortedUsingDescriptors:(NSArray*)descriptors;
+
+@end
+

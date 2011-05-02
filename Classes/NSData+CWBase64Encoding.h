@@ -1,7 +1,7 @@
 //
-//  CWLocalization.h
+//  NSData+CWBase64Encoding.h
 //  CWFoundation
-//  Created by Fredrik Olsson 
+//  Created by Alexander Jakobsen 
 //
 //  Copyright (c) 2011, Jayway AB All rights reserved.
 //
@@ -30,9 +30,9 @@
 
 #import <Foundation/Foundation.h>
 
-#define CWLocalizedStringFromTableInBundleNamed(key, tbl, bundleName) \
-	NSLocalizedStringFromTableInBundle((key), \
-                                       (tbl), \
-                                       [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:(bundleName) \
-                                                                                                ofType:@"bundle"]], \
-                                       nil)
+
+@interface NSData(CWBase64Encoding)
+
+-(NSString*)base64String;
+
+@end

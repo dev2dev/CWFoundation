@@ -1,5 +1,5 @@
 //
-//  CWXMLTranslationPlist.h
+//  NSDate+CWExtentions.h
 //  CWFoundation
 //  Created by Fredrik Olsson 
 //
@@ -30,38 +30,83 @@
 
 #import <Foundation/Foundation.h>
 
-extern NSString * const CWXMLTranslationFileExtension;
+/*!
+ * @abstract A category on NSLocale adding support for ISO locales.
+ */
+@interface NSLocale (CWISOLocale) 
 
 /*!
- * @abstract Helper class for reading translation definitions for CWXMLTranslator.
- *
- * @discussion The internal format for a translation is complex and undocumented.
+ * @abstract Get a locale mathcing the ISO standard.
  */
-@interface CWXMLTranslation : NSObject {
-@private
-	NSMutableArray* _nameStack;
-}
++(NSLocale*)ISOLocale;
+
+@end
+
 
 /*!
- * @abstract Deserialize a translation definition for a resource name.
- *
- * @discussion Resource is fetched using normal bundle resource rules.
- *			   A file with path extension .xmltranslation is parsed according to rules
- *			   detailed in the class description.
- *			   
- *             Any other file is deserialized as a property list.
- *
- * @param name Name of translation, should NOT include path extension.
- * 
- * @throws NSInvalidArgumentException if translation could not be found or is invalid.
+ * @abstract A cetegory on NSCalendar for accessing the Gregorian calender.
  */
-+(id)translationNamed:(NSString*)name;
+@interface NSCalendar (CWGregorianCalendar)
 
 /*!
- * @abstract Deserialize a translation definition from an string.
- *
- * @throws NSInvalidArgumentException if translation is invalid.
+ * @abstract Get a Gregorian calendar.
  */
-+(id)translationWithDSLString:(NSString*)dslString;
++(NSCalendar*)gregorianCalendar;
+
+@end
+
+/*!
+ * @abstract Category for working with proper ISO dates.
+ */
+@interface NSDate (CWISOAdditions)
+
+/*!
+ * @abstract Get a date from a string with a proper ISO date.
+ */
++(NSDate*)dateWithISODateString:(NSString*)isoDate;
+
+/*! @abstract Full ISO date, "2010-01-12". */
+-(NSString*)ISODate;         
+
+/*! @abstract Full ISO time, "13:52" */
+-(NSString*)ISOTime;         
+
+/*! @abstract Compact ISO date, "100112". */
+-(NSString*)compactISODate;  
+
+/*! @abstract Comapct ISO date, "1352". */
+-(NSString*)compactISOTime;  
+
+@end
+
+/*!
+ * @abstract Category for managing dates relative to the current date and time.
+ */
+@interface NSDate (CWRelativeDate)
+
+/*!
+ * @abstract Get a date that is relative to the current date and time.
+ */
++(NSDate*)relativeDateWithTimeIntervalSinceNow:(NSTimeInterval)timeInterval;
+
+/*!
+ * @abstract The date and time as a localized string in short format.
+ */
+-(NSString*)localizedShortString;
+
+/*!
+ * @abstract The date as a localized string in short format.
+ */
+-(NSString*)localizedShortDateString;
+
+/*!
+ * @abstract The time as a localized string in short format.
+ */
+-(NSString*)localizedShortTimeString;
+
+/*!
+ * @abstract Query if date is relative to current date and time.
+ */ 
+-(BOOL)isRelativeDate;
 
 @end

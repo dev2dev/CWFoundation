@@ -1,5 +1,5 @@
 //
-//  CWLocalization.h
+//  CWOrderedDictionaryTest.h
 //  CWFoundation
 //  Created by Fredrik Olsson 
 //
@@ -28,11 +28,23 @@
 //  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
-#import <Foundation/Foundation.h>
+#import <SenTestingKit/SenTestingKit.h>
+#import "CWOrderedDictionary.h"
 
-#define CWLocalizedStringFromTableInBundleNamed(key, tbl, bundleName) \
-	NSLocalizedStringFromTableInBundle((key), \
-                                       (tbl), \
-                                       [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:(bundleName) \
-                                                                                                ofType:@"bundle"]], \
-                                       nil)
+
+@interface CWOrderedDictionaryTest : SenTestCase {
+    NSArray* keys;
+	NSArray* objects;
+	CWOrderedDictionary* orderedDictionary;
+}
+
+-(void)testAllInitializersYieldSameResult;
+
+-(void)testKeysAndObjectsAreOrderedAfterInitialization;
+-(void)testInsertsWithSetObject;
+-(void)testInsertsWithInsertAtIndex;
+
+-(void)testKeyAndObjectAtIndex;
+-(void)testObjectAtIndexAndForKey;
+
+@end
