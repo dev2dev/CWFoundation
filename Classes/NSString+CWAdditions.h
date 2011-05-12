@@ -39,3 +39,12 @@
 -(NSRange)rangeOfNonCommonPrefixAndSuffixWithString:(NSString*)string;
 
 @end
+
+
+@interface NSString (CWUUID)
+
++(NSString*)randomUUIDString;
+
+-(BOOL)isUUIDString;
+
+@end

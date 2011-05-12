@@ -42,5 +42,5 @@
 #import "NSObject+CWAssociatedObject.h"
 #import "NSOperationQueue+CWDefaultQueue.h"
 #import "NSOperationQueue+CWReplaceOperation.h"
-#import "NSString+CWPrefixAndSuffix.h"
+#import "NSString+CWAdditions.h"
 #import "NSURLLoadingSystem+CWAdditions.h"

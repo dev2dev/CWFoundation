@@ -28,7 +28,7 @@
 //  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
-#import "NSString+CWPrefixAndSuffix.h"
+#import "NSString+CWAdditions.h"
 
 
 @implementation NSString (CWPrefixAndSuffix)
@@ -87,6 +87,32 @@
         range.length = [self length] - (range.location + length);
     }
     return range;
+}
+
+@end
+
+
+
+@implementation NSString (CWUUID)
+
++(NSString*)randomUUIDString;
+{
+	CFUUIDRef uuidRef = CFUUIDCreate(NULL);
+    CFStringRef stringRef = CFUUIDCreateString(NULL, uuidRef);
+    NSString* uuidString = [NSString stringWithString:(id)stringRef];
+    CFRelease(stringRef);
+    CFRelease(uuidRef);
+    return uuidString;
+}
+
+-(BOOL)isUUIDString;
+{
+	CFUUIDRef uuidRef = CFUUIDCreateFromString(NULL, (CFStringRef)self);
+    if (uuidRef) {
+        CFRelease(uuidRef);
+    	return YES;
+    }
+    return NO;   
 }
 
 @end

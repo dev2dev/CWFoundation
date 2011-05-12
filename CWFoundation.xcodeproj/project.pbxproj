@@ -17,8 +17,8 @@
 		A61083C2136ECE2F00D42782 /* NSDate+CWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A61083B6136ECE2F00D42782 /* NSDate+CWAdditions.m */; };
 		A61083C3136ECE2F00D42782 /* NSObject+CWAssociatedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = A61083B7136ECE2F00D42782 /* NSObject+CWAssociatedObject.h */; };
 		A61083C4136ECE2F00D42782 /* NSObject+CWAssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A61083B8136ECE2F00D42782 /* NSObject+CWAssociatedObject.m */; };
-		A61083C5136ECE2F00D42782 /* NSString+CWPrefixAndSuffix.h in Headers */ = {isa = PBXBuildFile; fileRef = A61083B9136ECE2F00D42782 /* NSString+CWPrefixAndSuffix.h */; };
-		A61083C6136ECE2F00D42782 /* NSString+CWPrefixAndSuffix.m in Sources */ = {isa = PBXBuildFile; fileRef = A61083BA136ECE2F00D42782 /* NSString+CWPrefixAndSuffix.m */; };
+		A61083C5136ECE2F00D42782 /* NSString+CWAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A61083B9136ECE2F00D42782 /* NSString+CWAdditions.h */; };
+		A61083C6136ECE2F00D42782 /* NSString+CWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A61083BA136ECE2F00D42782 /* NSString+CWAdditions.m */; };
 		A61083CF136ECFA100D42782 /* CWOrderedDictionaryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A61083CA136ECFA100D42782 /* CWOrderedDictionaryTest.m */; };
 		A61083D0136ECFA100D42782 /* NSObjectAssociatedObjectsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A61083CC136ECFA100D42782 /* NSObjectAssociatedObjectsTest.m */; };
 		A61083D1136ECFA100D42782 /* NSStringCWPrefixAndSuffixTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A61083CE136ECFA100D42782 /* NSStringCWPrefixAndSuffixTests.m */; };
@@ -105,8 +105,8 @@
 		A61083B6136ECE2F00D42782 /* NSDate+CWAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "NSDate+CWAdditions.m"; path = "Classes/NSDate+CWAdditions.m"; sourceTree = "<group>"; };
 		A61083B7136ECE2F00D42782 /* NSObject+CWAssociatedObject.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = "NSObject+CWAssociatedObject.h"; path = "Classes/NSObject+CWAssociatedObject.h"; sourceTree = "<group>"; };
 		A61083B8136ECE2F00D42782 /* NSObject+CWAssociatedObject.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "NSObject+CWAssociatedObject.m"; path = "Classes/NSObject+CWAssociatedObject.m"; sourceTree = "<group>"; };
-		A61083B9136ECE2F00D42782 /* NSString+CWPrefixAndSuffix.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = "NSString+CWPrefixAndSuffix.h"; path = "Classes/NSString+CWPrefixAndSuffix.h"; sourceTree = "<group>"; };
-		A61083BA136ECE2F00D42782 /* NSString+CWPrefixAndSuffix.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "NSString+CWPrefixAndSuffix.m"; path = "Classes/NSString+CWPrefixAndSuffix.m"; sourceTree = "<group>"; };
+		A61083B9136ECE2F00D42782 /* NSString+CWAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = "NSString+CWAdditions.h"; path = "Classes/NSString+CWAdditions.h"; sourceTree = "<group>"; };
+		A61083BA136ECE2F00D42782 /* NSString+CWAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "NSString+CWAdditions.m"; path = "Classes/NSString+CWAdditions.m"; sourceTree = "<group>"; };
 		A61083C9136ECFA100D42782 /* CWOrderedDictionaryTest.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = CWOrderedDictionaryTest.h; path = "Test Classes/CWOrderedDictionaryTest.h"; sourceTree = "<group>"; };
 		A61083CA136ECFA100D42782 /* CWOrderedDictionaryTest.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = CWOrderedDictionaryTest.m; path = "Test Classes/CWOrderedDictionaryTest.m"; sourceTree = "<group>"; };
 		A61083CB136ECFA100D42782 /* NSObjectAssociatedObjectsTest.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = NSObjectAssociatedObjectsTest.h; path = "Test Classes/NSObjectAssociatedObjectsTest.h"; sourceTree = "<group>"; };
@@ -283,8 +283,8 @@
 				A6ED913913694ABB002DCEE4 /* NSOperationQueue+CWDefaultQueue.m */,
 				A6ED913A13694ABB002DCEE4 /* NSOperationQueue+CWReplaceOperation.h */,
 				A6ED913B13694ABB002DCEE4 /* NSOperationQueue+CWReplaceOperation.m */,
-				A61083B9136ECE2F00D42782 /* NSString+CWPrefixAndSuffix.h */,
-				A61083BA136ECE2F00D42782 /* NSString+CWPrefixAndSuffix.m */,
+				A61083B9136ECE2F00D42782 /* NSString+CWAdditions.h */,
+				A61083BA136ECE2F00D42782 /* NSString+CWAdditions.m */,
 				A6ED943613697EAE002DCEE4 /* NSURLLoadingSystem+CWAdditions.h */,
 				A6ED943713697EAE002DCEE4 /* NSURLLoadingSystem+CWAdditions.m */,
 			);
@@ -378,7 +378,7 @@
 				A61083BF136ECE2F00D42782 /* NSData+CWBase64Encoding.h in Headers */,
 				A61083C1136ECE2F00D42782 /* NSDate+CWAdditions.h in Headers */,
 				A61083C3136ECE2F00D42782 /* NSObject+CWAssociatedObject.h in Headers */,
-				A61083C5136ECE2F00D42782 /* NSString+CWPrefixAndSuffix.h in Headers */,
+				A61083C5136ECE2F00D42782 /* NSString+CWAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,7 +604,7 @@
 				A61083C0136ECE2F00D42782 /* NSData+CWBase64Encoding.m in Sources */,
 				A61083C2136ECE2F00D42782 /* NSDate+CWAdditions.m in Sources */,
 				A61083C4136ECE2F00D42782 /* NSObject+CWAssociatedObject.m in Sources */,
-				A61083C6136ECE2F00D42782 /* NSString+CWPrefixAndSuffix.m in Sources */,
+				A61083C6136ECE2F00D42782 /* NSString+CWAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
