@@ -293,13 +293,14 @@ static void CWReachabilityCallback(SCNetworkReachabilityRef target,
     }
     _isMonitoring = YES;
     SCNetworkReachabilityContext context = {0, self, NULL, NULL, NULL};
+    BOOL success = NO;
 	if (SCNetworkReachabilitySetCallback(_reachabilityRef, CWReachabilityCallback, &context)) {
-		return SCNetworkReachabilityScheduleWithRunLoop(_reachabilityRef, 
-                                                        CFRunLoopGetCurrent(), 
-                                                        kCFRunLoopDefaultMode);
+		success = SCNetworkReachabilityScheduleWithRunLoop(_reachabilityRef, 
+                                                           CFRunLoopGetCurrent(), 
+                                                           kCFRunLoopDefaultMode);
 	}
 	[self networkStatus];
-	return NO;
+	return success;
 }
 
 -(void)stopMonitoringNetworkStatus;
