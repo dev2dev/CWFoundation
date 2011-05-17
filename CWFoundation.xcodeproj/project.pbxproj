@@ -134,6 +134,7 @@
 		A6B254F4136BFD5100D5F57F /* NetworkMonitorSampleApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "NetworkMonitorSampleApp-Info.plist"; path = "Sample Classes/NetworkMonitor/NetworkMonitorSampleApp-Info.plist"; sourceTree = SOURCE_ROOT; };
 		A6B254F5136BFD5100D5F57F /* SampleAppAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleAppAppDelegate.h; path = "Sample Classes/NetworkMonitor/SampleAppAppDelegate.h"; sourceTree = SOURCE_ROOT; };
 		A6B254F6136BFD5100D5F57F /* SampleAppAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleAppAppDelegate.m; path = "Sample Classes/NetworkMonitor/SampleAppAppDelegate.m"; sourceTree = SOURCE_ROOT; };
+		A6B5CF561382ACFF00D806A8 /* README-XMLTranslator */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "README-XMLTranslator"; sourceTree = "<group>"; };
 		A6ED906F1369473E002DCEE4 /* README */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		A6ED913213694ABB002DCEE4 /* CWLocalization.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = CWLocalization.h; path = Classes/CWLocalization.h; sourceTree = "<group>"; };
 		A6ED913313694ABB002DCEE4 /* CWLog.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = CWLog.h; path = Classes/CWLog.h; sourceTree = "<group>"; };
@@ -232,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				A6ED906F1369473E002DCEE4 /* README */,
+				A6B5CF561382ACFF00D806A8 /* README-XMLTranslator */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				A63D5B021339E86A005D6725 /* Test Classes */,
 				A63D5B031339E874005D6725 /* Sample Classes */,
