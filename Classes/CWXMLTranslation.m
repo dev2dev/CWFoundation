@@ -76,7 +76,7 @@ NSString * const CWXMLTranslationFileExtension = @"xmltranslation";
     	type = CWXMLTranslationFileExtension;
     }
     name = [name stringByDeletingPathExtension];
-	NSString* path = [[NSBundle mainBundle] pathForResource:name 
+	NSString* path = [[NSBundle bundleForClass:[self class]] pathForResource:name 
                                                      ofType:type];
     if (!path) {
         [NSException raise:NSInvalidArgumentException
@@ -318,9 +318,10 @@ NSString * const CWXMLTranslationFileExtension = @"xmltranslation";
             }
             [_nameStack removeLastObject];
         } else {
-            NSString* path = [[NSBundle mainBundle] pathForResource:[name stringByDeletingPathExtension]
+            NSString* path = [[NSBundle bundleForClass:[self class]] pathForResource:[name stringByDeletingPathExtension]
                                                              ofType:[name pathExtension]];
             result = [NSDictionary dictionaryWithContentsOfFile:path];
+			NSLog(@"Translation path: %@",path);
         }
         if (result) {
         	if (translationCache == nil) {
