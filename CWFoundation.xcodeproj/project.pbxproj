@@ -22,6 +22,8 @@
 		A61083CF136ECFA100D42782 /* CWOrderedDictionaryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A61083CA136ECFA100D42782 /* CWOrderedDictionaryTest.m */; };
 		A61083D0136ECFA100D42782 /* NSObjectAssociatedObjectsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A61083CC136ECFA100D42782 /* NSObjectAssociatedObjectsTest.m */; };
 		A61083D1136ECFA100D42782 /* NSStringCWPrefixAndSuffixTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A61083CE136ECFA100D42782 /* NSStringCWPrefixAndSuffixTests.m */; };
+		A69185F913E1B289006F25AD /* NSCalendar+CWAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A69185F713E1B289006F25AD /* NSCalendar+CWAdditions.h */; };
+		A69185FA13E1B289006F25AD /* NSCalendar+CWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A69185F813E1B289006F25AD /* NSCalendar+CWAdditions.m */; };
 		A6A9717B1369B26C0065D9BE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A971751369B2550065D9BE /* SystemConfiguration.framework */; };
 		A6A971A11369B2F40065D9BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		A6A971A41369B2F40065D9BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A971A31369B2F40065D9BE /* UIKit.framework */; };
@@ -113,6 +115,8 @@
 		A61083CC136ECFA100D42782 /* NSObjectAssociatedObjectsTest.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = NSObjectAssociatedObjectsTest.m; path = "Test Classes/NSObjectAssociatedObjectsTest.m"; sourceTree = "<group>"; };
 		A61083CD136ECFA100D42782 /* NSStringCWPrefixAndSuffixTests.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = NSStringCWPrefixAndSuffixTests.h; path = "Test Classes/NSStringCWPrefixAndSuffixTests.h"; sourceTree = "<group>"; };
 		A61083CE136ECFA100D42782 /* NSStringCWPrefixAndSuffixTests.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = NSStringCWPrefixAndSuffixTests.m; path = "Test Classes/NSStringCWPrefixAndSuffixTests.m"; sourceTree = "<group>"; };
+		A69185F713E1B289006F25AD /* NSCalendar+CWAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = "NSCalendar+CWAdditions.h"; path = "Classes/NSCalendar+CWAdditions.h"; sourceTree = "<group>"; };
+		A69185F813E1B289006F25AD /* NSCalendar+CWAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "NSCalendar+CWAdditions.m"; path = "Classes/NSCalendar+CWAdditions.m"; sourceTree = "<group>"; };
 		A6A971701369B20D0065D9BE /* CWNetworkMonitor.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = CWNetworkMonitor.h; path = Classes/CWNetworkMonitor.h; sourceTree = "<group>"; };
 		A6A971711369B20D0065D9BE /* CWNetworkMonitor.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = CWNetworkMonitor.m; path = Classes/CWNetworkMonitor.m; sourceTree = "<group>"; };
 		A6A971751369B2550065D9BE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -271,6 +275,8 @@
 				A6ED94EB13698284002DCEE4 /* CWXMLTranslator.m */,
 				A61083B1136ECE2F00D42782 /* NSArray+CWSortedInsert.h */,
 				A61083B2136ECE2F00D42782 /* NSArray+CWSortedInsert.m */,
+				A69185F713E1B289006F25AD /* NSCalendar+CWAdditions.h */,
+				A69185F813E1B289006F25AD /* NSCalendar+CWAdditions.m */,
 				A61083B3136ECE2F00D42782 /* NSData+CWBase64Encoding.h */,
 				A61083B4136ECE2F00D42782 /* NSData+CWBase64Encoding.m */,
 				A61083B5136ECE2F00D42782 /* NSDate+CWAdditions.h */,
@@ -381,6 +387,7 @@
 				A61083C1136ECE2F00D42782 /* NSDate+CWAdditions.h in Headers */,
 				A61083C3136ECE2F00D42782 /* NSObject+CWAssociatedObject.h in Headers */,
 				A61083C5136ECE2F00D42782 /* NSString+CWAdditions.h in Headers */,
+				A69185F913E1B289006F25AD /* NSCalendar+CWAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +614,7 @@
 				A61083C2136ECE2F00D42782 /* NSDate+CWAdditions.m in Sources */,
 				A61083C4136ECE2F00D42782 /* NSObject+CWAssociatedObject.m in Sources */,
 				A61083C6136ECE2F00D42782 /* NSString+CWAdditions.m in Sources */,
+				A69185FA13E1B289006F25AD /* NSCalendar+CWAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -35,6 +35,7 @@
 #import "CWXMLTranslation.h"
 #import "CWXMLTranslator.h"
 #import "NSArray+CWSortedInsert.h"
+#import "NSCalendar+CWAdditions.h"
 #import "NSData+CWBase64Encoding.h"
 #import "NSDate+CWAdditions.h"
 #import "NSError+CWAdditions.h"

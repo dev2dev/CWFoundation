@@ -32,7 +32,7 @@
 #import <SenTestingKit/SenTestingKit.h>
 #import <UIKit/UIKit.h>
 
-#import "NSString+CWPrefixAndSuffix.h"
+#import "NSString+CWAdditions.h"
 
 
 @interface NSStringCWPrefixAndSuffixTests : SenTestCase {
