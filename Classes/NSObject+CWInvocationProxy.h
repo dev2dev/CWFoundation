@@ -37,32 +37,32 @@
  * @discussion Requesting a proxy to the current thread will always yield the
  *             receiver without creating a proxy.
  */
-@interface NSObject (CWProxy)
+@interface NSObject (CWInvocationProxy)
 
 /*!
  * @abstract Proxy for invoking methods on the main thread.
  */
--(id)mainProxy;
+-(id)onMainThread;
 
 /*!
  * @abstract Proxy for invoking methods on a background thread.
  */
--(id)backgroundProxy;
+-(id)inBackground;
 
 /*!
  * @abstract Proxy for invoking methods on specific thread, optionaly block until done.
  */
--(id)proxyForThread:(NSThread*)thread;
+-(id)onThread:(NSThread*)thread;
 
 /*!
  * @abstract Proxy for invoking methods on default NSOperationQueue.
  */
--(id)queueProxy;
+-(id)onDefaultQueue;
 
 /*!
  * @abstract Proxy for invoking methods on specific NSOperationQueue.
  */
--(id)proxyForQueue:(NSOperationQueue*)queue;
+-(id)onQueue:(NSOperationQueue*)queue;
 
 /*!
  * @discussion Block current thread until methods has been invocated on target thread.

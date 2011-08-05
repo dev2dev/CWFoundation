@@ -7,7 +7,7 @@
 //
 
 #import "RSSFeedTableViewController.h"
-#import "NSObject+CWProxy.h"
+#import "NSObject+CWInvocationProxy.h"
 
 @implementation RSSFeedTableViewController
 
@@ -64,7 +64,7 @@
 {
 	if (key == nil && [name isEqualToString:@"title"]) {
         // If it is the feeds title then set the navigation title but skip adding the object.
-        [[self.navigationItem mainProxy] setTitle:anObject];
+        [[self.navigationItem onMainThread] setTitle:anObject];
     	return nil;
     }
     return anObject;

@@ -41,7 +41,7 @@
 #import "NSError+CWAdditions.h"
 #import "NSInvocation+CWVariableArguments.h"
 #import "NSObject+CWAssociatedObject.h"
-#import "NSObject+CWProxy.h"
+#import "NSObject+CWInvocationProxy.h"
 #import "NSOperationQueue+CWDefaultQueue.h"
 #import "NSOperationQueue+CWReplaceOperation.h"
 #import "NSString+CWAdditions.h"

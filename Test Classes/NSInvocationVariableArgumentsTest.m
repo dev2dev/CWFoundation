@@ -30,7 +30,7 @@
 
 #import "NSInvocationVariableArgumentsTest.h"
 #import "NSInvocation+CWVariableArguments.h"
-#import "NSObject+CWProxy.h"
+#import "NSObject+CWInvocationProxy.h"
 
 @implementation NSInvocationVariableArgumentsTest
 
@@ -159,7 +159,7 @@ typedef struct {
 -(void)testCurrentThreadProxy;
 {
     NSConditionLock* lock = [[NSConditionLock alloc] initWithCondition:0];
-	[[self proxyForThread:[NSThread currentThread]] unlockConditionalLock:lock];
+	[[self onThread:[NSThread currentThread]] unlockConditionalLock:lock];
     if (![lock lockWhenCondition:1
                       beforeDate:[NSDate dateWithTimeIntervalSinceNow:5]]) {
     	STFail(@"Could not aquire lock on main thread");
@@ -170,7 +170,7 @@ typedef struct {
 {
     NSLog(@"testBackgroundProxy called");
     NSConditionLock* lock = [[NSConditionLock alloc] initWithCondition:0];
-	[[self backgroundProxy] unlockConditionalLock:lock];
+	[[self inBackground] unlockConditionalLock:lock];
     if (![lock lockWhenCondition:1
                       beforeDate:[NSDate dateWithTimeIntervalSinceNow:5]]) {
     	STFail(@"Could not aquire lock on main thread");
@@ -180,7 +180,7 @@ typedef struct {
 -(void)testQueueProxy;
 {
     NSConditionLock* lock = [[NSConditionLock alloc] initWithCondition:0];
-	[[self queueProxy] unlockConditionalLock:lock];
+	[[self onDefaultQueue] unlockConditionalLock:lock];
     if (![lock lockWhenCondition:1
                       beforeDate:[NSDate dateWithTimeIntervalSinceNow:5]]) {
     	STFail(@"Could not aquire lock on main thread");

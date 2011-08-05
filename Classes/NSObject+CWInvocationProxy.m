@@ -28,63 +28,63 @@
 //  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
-#import "NSObject+CWProxy.h"
+#import "NSObject+CWInvocationProxy.h"
 
 #import "NSOperationQueue+CWDefaultQueue.h"
 
 typedef enum {
-	CWProxyTargetBackgound,
-	CWProxyTargetThread,
-	CWProxyTargetQueue,
-} CWProxyTarget;
+	CWInvocationProxyTypeBackgound,
+	CWInvocationProxyTypeThread,
+	CWInvocationProxyTypeQueue,
+} CWInvocationProxyType;
 
-@interface CWProxy : NSObject {
+@interface CWInvocationProxy : NSObject {
 @private
-    id _object;
-    CWProxyTarget _proxyTarget;
+    id _target;
+    CWInvocationProxyType _type;
     NSThread* _thread;
     NSOperationQueue* _queue;
     BOOL _wait;
     NSTimeInterval _delay;
 }
 
-+(id)proxyForObject:(id)object;
-+(id)proxyForObject:(id)object onThread:(NSThread*)thread;
-+(id)proxyForObject:(id)object onQueue:(NSOperationQueue*)queue;
++(id)backgroundProxyForTarget:(id)target;
++(id)threadProxyForTarget:(id)target onThread:(NSThread*)thread;
++(id)queueProxyForTarget:(id)target onQueue:(NSOperationQueue*)queue;
 
 @end
 
 
 
-@implementation NSObject (CWProxy)
+@implementation NSObject (CWInvocationProxy)
 
--(id)mainProxy;
+-(id)onMainThread;
 {
-    return [self proxyForThread:[NSThread mainThread]];
+    return [self onThread:[NSThread mainThread]];
 }
 
--(id)backgroundProxy;
+-(id)inBackground;
 {
-    return [CWProxy proxyForObject:self];
+    return [CWInvocationProxy backgroundProxyForTarget:self];
 }
 
--(id)proxyForThread:(NSThread*)thread;
+-(id)onThread:(NSThread*)thread;
 {
     if (thread == [NSThread currentThread]) {
         return self;
     } else {
-        return [CWProxy proxyForObject:self onThread:thread];
+        return [CWInvocationProxy threadProxyForTarget:self onThread:thread];
     }
 }
 
--(id)queueProxy;
+-(id)onDefaultQueue;
 {
-    return [self proxyForQueue:[NSOperationQueue defaultQueue]];
+    return [self onQueue:[NSOperationQueue defaultQueue]];
 }
 
--(id)proxyForQueue:(NSOperationQueue*)queue;
+-(id)onQueue:(NSOperationQueue*)queue;
 {
-    return [CWProxy proxyForObject:self onQueue:queue];
+    return [CWInvocationProxy queueProxyForTarget:self onQueue:queue];
 }
 
 -(id)waitUntilDone;
@@ -94,44 +94,44 @@ typedef enum {
 
 -(id)afterDelay:(NSTimeInterval)delay;
 {
-	CWProxy* proxy = [CWProxy proxyForObject:self onThread:[NSThread currentThread]];
+	CWInvocationProxy* proxy = [CWInvocationProxy threadProxyForTarget:self onThread:[NSThread currentThread]];
     return [proxy afterDelay:delay];
 }
 
 @end
 
 
-@implementation CWProxy
+@implementation CWInvocationProxy
 
-+(id)proxyForObject:(id)object;
++(id)backgroundProxyForTarget:(id)target;
 {
-    CWProxy* proxy = [[[self alloc] init] autorelease];
-    proxy->_object = [object retain];
-    proxy->_proxyTarget = CWProxyTargetBackgound;
+    CWInvocationProxy* proxy = [[[self alloc] init] autorelease];
+    proxy->_target = [target retain];
+    proxy->_type = CWInvocationProxyTypeBackgound;
     return proxy;
 }
 
-+(id)proxyForObject:(id)object onThread:(NSThread*)thread;
++(id)threadProxyForTarget:(id)target onThread:(NSThread*)thread;
 {
-    CWProxy* proxy = [[[self alloc] init] autorelease];
-    proxy->_object = [object retain];
-    proxy->_proxyTarget = CWProxyTargetThread;
+    CWInvocationProxy* proxy = [[[self alloc] init] autorelease];
+    proxy->_target = [target retain];
+    proxy->_type = CWInvocationProxyTypeThread;
     proxy->_thread = [thread retain];
     return proxy;
 }
 
-+(id)proxyForObject:(id)object onQueue:(NSOperationQueue*)queue;
++(id)queueProxyForTarget:(id)target onQueue:(NSOperationQueue*)queue;
 {
-    CWProxy* proxy = [[[self alloc] init] autorelease];
-    proxy->_object = [object retain];
-    proxy->_proxyTarget = CWProxyTargetQueue;
+    CWInvocationProxy* proxy = [[[self alloc] init] autorelease];
+    proxy->_target = [target retain];
+    proxy->_type = CWInvocationProxyTypeQueue;
     proxy->_queue = [queue retain];
     return proxy;
 }
 
 -(void)dealloc;
 {
-    [_object release];
+    [_target release];
     [_thread release];
     [_queue release];
     [super dealloc];
@@ -139,13 +139,13 @@ typedef enum {
 
 -(BOOL)respondsToSelector:(SEL)aSelector;
 {
-    return [super respondsToSelector:aSelector] || [_object respondsToSelector:aSelector];
+    return [super respondsToSelector:aSelector] || [_target respondsToSelector:aSelector];
 }
 
 -(NSMethodSignature*)methodSignatureForSelector:(SEL)aSelector;
 {
-	if ([_object respondsToSelector:aSelector]) {
-	    return [_object methodSignatureForSelector:aSelector];
+	if ([_target respondsToSelector:aSelector]) {
+	    return [_target methodSignatureForSelector:aSelector];
     } else {
     	return [super methodSignatureForSelector:aSelector];
     }
@@ -160,34 +160,28 @@ typedef enum {
         _delay = 0;
         return;
     }
-	switch (_proxyTarget) {
-        case CWProxyTargetBackgound:
-            [self performSelectorInBackground:@selector(wrapInvocation:) 
-                                   withObject:invocation];
+	switch (_type) {
+        case CWInvocationProxyTypeBackgound:
+            [invocation performSelectorInBackground:@selector(invokeWithTarget:) 
+                                         withObject:_target];
             break;
-        case CWProxyTargetThread:
-            [self performSelector:@selector(wrapInvocation:) 
-                         onThread:_thread 
-                       withObject:invocation
-                    waitUntilDone:_wait];
+        case CWInvocationProxyTypeThread:
+            [invocation performSelector:@selector(invokeWithTarget:)
+                               onThread:_thread
+                             withObject:_target
+                          waitUntilDone:_wait];
             break;
-        case CWProxyTargetQueue: {
-			NSInvocationOperation* operation = [self performSelector:@selector(wrapInvocation:)
-                                                             onQueue:_queue 
-                                                          withObject:invocation];
+        case CWInvocationProxyTypeQueue: {
+            [invocation setTarget:_target];
+			NSInvocationOperation* operation = [[NSInvocationOperation alloc] initWithInvocation:invocation];
+			[_queue addOperation:operation];
             if (_wait) {
             	[operation waitUntilFinished];
             }
+            [operation release];
             break;
         }
     }
-}
-
--(void)wrapInvocation:(NSInvocation*)invocation;
-{
-	NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
-    [invocation invokeWithTarget:_object];
-    [pool release];
 }
 
 -(id)waitUntilDone;
