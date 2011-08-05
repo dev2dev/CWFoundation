@@ -67,12 +67,12 @@ static NSOperationQueue* cw_defaultQueue = nil;
 
 -(NSInvocationOperation*)performSelectorInDefaultQueue:(SEL)aSelector withObject:(id)arg;
 {
-	NSInvocationOperation* operation = [[NSInvocationOperation alloc] initWithTarget:self selector:aSelector object:arg];
-    [[NSOperationQueue defaultQueue] addOperation:operation];
-	return [operation autorelease];  
+    return [self performSelector:aSelector
+                         onQueue:[NSOperationQueue defaultQueue]
+                      withObject:arg];
 }
 
--(NSInvocationOperation*)performSelectorInDefaultQueue:(SEL)aSelector withObject:(id)arg dependencies:(NSArray*)dependencies priority:(NSOperationQueuePriority)priority;
+-(NSInvocationOperation*)performSelectorInDefaultQueue:(SEL)aSelector withObject:(id)arg  dependencies:(NSArray*)dependencies priority:(NSOperationQueuePriority)priority;
 {
 	NSInvocationOperation* operation = [[NSInvocationOperation alloc] initWithTarget:self selector:aSelector object:arg];
     [operation setQueuePriority:priority];
@@ -80,6 +80,13 @@ static NSOperationQueue* cw_defaultQueue = nil;
         [operation addDependency:dependency]; 
     }
     [[NSOperationQueue defaultQueue] addOperation:operation];
+	return [operation autorelease];  
+}
+
+-(NSInvocationOperation*)performSelector:(SEL)aSelector onQueue:(NSOperationQueue*)queue withObject:(id)arg;
+{
+	NSInvocationOperation* operation = [[NSInvocationOperation alloc] initWithTarget:self selector:aSelector object:arg];
+    [queue addOperation:operation];
 	return [operation autorelease];  
 }
 

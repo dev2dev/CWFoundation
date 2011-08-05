@@ -22,6 +22,8 @@
 		A61083CF136ECFA100D42782 /* CWOrderedDictionaryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A61083CA136ECFA100D42782 /* CWOrderedDictionaryTest.m */; };
 		A61083D0136ECFA100D42782 /* NSObjectAssociatedObjectsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A61083CC136ECFA100D42782 /* NSObjectAssociatedObjectsTest.m */; };
 		A61083D1136ECFA100D42782 /* NSStringCWPrefixAndSuffixTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A61083CE136ECFA100D42782 /* NSStringCWPrefixAndSuffixTests.m */; };
+		A6754E6F13EC32A40097D3E9 /* NSObject+CWProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = A6754E6D13EC32A40097D3E9 /* NSObject+CWProxy.h */; };
+		A6754E7013EC32A40097D3E9 /* NSObject+CWProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = A6754E6E13EC32A40097D3E9 /* NSObject+CWProxy.m */; };
 		A69185F913E1B289006F25AD /* NSCalendar+CWAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A69185F713E1B289006F25AD /* NSCalendar+CWAdditions.h */; };
 		A69185FA13E1B289006F25AD /* NSCalendar+CWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A69185F813E1B289006F25AD /* NSCalendar+CWAdditions.m */; };
 		A6A9717B1369B26C0065D9BE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A971751369B2550065D9BE /* SystemConfiguration.framework */; };
@@ -115,6 +117,8 @@
 		A61083CC136ECFA100D42782 /* NSObjectAssociatedObjectsTest.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = NSObjectAssociatedObjectsTest.m; path = "Test Classes/NSObjectAssociatedObjectsTest.m"; sourceTree = "<group>"; };
 		A61083CD136ECFA100D42782 /* NSStringCWPrefixAndSuffixTests.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = NSStringCWPrefixAndSuffixTests.h; path = "Test Classes/NSStringCWPrefixAndSuffixTests.h"; sourceTree = "<group>"; };
 		A61083CE136ECFA100D42782 /* NSStringCWPrefixAndSuffixTests.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = NSStringCWPrefixAndSuffixTests.m; path = "Test Classes/NSStringCWPrefixAndSuffixTests.m"; sourceTree = "<group>"; };
+		A6754E6D13EC32A40097D3E9 /* NSObject+CWProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CWProxy.h"; sourceTree = "<group>"; };
+		A6754E6E13EC32A40097D3E9 /* NSObject+CWProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CWProxy.m"; sourceTree = "<group>"; };
 		A69185F713E1B289006F25AD /* NSCalendar+CWAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = "NSCalendar+CWAdditions.h"; path = "Classes/NSCalendar+CWAdditions.h"; sourceTree = "<group>"; };
 		A69185F813E1B289006F25AD /* NSCalendar+CWAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "NSCalendar+CWAdditions.m"; path = "Classes/NSCalendar+CWAdditions.m"; sourceTree = "<group>"; };
 		A6A971701369B20D0065D9BE /* CWNetworkMonitor.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = CWNetworkMonitor.h; path = Classes/CWNetworkMonitor.h; sourceTree = "<group>"; };
@@ -287,6 +291,8 @@
 				A6ED913713694ABB002DCEE4 /* NSInvocation+CWVariableArguments.m */,
 				A61083B7136ECE2F00D42782 /* NSObject+CWAssociatedObject.h */,
 				A61083B8136ECE2F00D42782 /* NSObject+CWAssociatedObject.m */,
+				A6754E6D13EC32A40097D3E9 /* NSObject+CWProxy.h */,
+				A6754E6E13EC32A40097D3E9 /* NSObject+CWProxy.m */,
 				A6ED913813694ABB002DCEE4 /* NSOperationQueue+CWDefaultQueue.h */,
 				A6ED913913694ABB002DCEE4 /* NSOperationQueue+CWDefaultQueue.m */,
 				A6ED913A13694ABB002DCEE4 /* NSOperationQueue+CWReplaceOperation.h */,
@@ -388,6 +394,7 @@
 				A61083C3136ECE2F00D42782 /* NSObject+CWAssociatedObject.h in Headers */,
 				A61083C5136ECE2F00D42782 /* NSString+CWAdditions.h in Headers */,
 				A69185F913E1B289006F25AD /* NSCalendar+CWAdditions.h in Headers */,
+				A6754E6F13EC32A40097D3E9 /* NSObject+CWProxy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,6 +622,7 @@
 				A61083C4136ECE2F00D42782 /* NSObject+CWAssociatedObject.m in Sources */,
 				A61083C6136ECE2F00D42782 /* NSString+CWAdditions.m in Sources */,
 				A69185FA13E1B289006F25AD /* NSCalendar+CWAdditions.m in Sources */,
+				A6754E7013EC32A40097D3E9 /* NSObject+CWProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

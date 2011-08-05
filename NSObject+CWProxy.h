@@ -1,5 +1,5 @@
 //
-//  CWFoundation.h
+//  NSObject+CWProxy.h
 //  CWFoundation
 //  Created by Fredrik Olsson 
 //
@@ -28,21 +28,52 @@
 //  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
-#import "CWFileURLFromDataTransformer.h"
-#import "CWLocalization.h"
-#import "CWLog.h"
-#import "CWOrderedDictionary.h"
-#import "CWXMLTranslation.h"
-#import "CWXMLTranslator.h"
-#import "NSArray+CWSortedInsert.h"
-#import "NSCalendar+CWAdditions.h"
-#import "NSData+CWBase64Encoding.h"
-#import "NSDate+CWAdditions.h"
-#import "NSError+CWAdditions.h"
-#import "NSInvocation+CWVariableArguments.h"
-#import "NSObject+CWAssociatedObject.h"
-#import "NSObject+CWProxy.h"
-#import "NSOperationQueue+CWDefaultQueue.h"
-#import "NSOperationQueue+CWReplaceOperation.h"
-#import "NSString+CWAdditions.h"
-#import "NSURLLoadingSystem+CWAdditions.h"
+#import <Foundation/Foundation.h>
+
+/*!
+ * @abstract A category on NSObject to access proxies for invoking method calls
+ *           on oher threads.
+ *
+ * @discussion Requesting a proxy to the current thread will always yield the
+ *             receiver without creating a proxy.
+ */
+@interface NSObject (CWProxy)
+
+/*!
+ * @abstract Proxy for invoking methods on the main thread.
+ */
+-(id)mainProxy;
+
+/*!
+ * @abstract Proxy for invoking methods on a background thread.
+ */
+-(id)backgroundProxy;
+
+/*!
+ * @abstract Proxy for invoking methods on specific thread, optionaly block until done.
+ */
+-(id)proxyForThread:(NSThread*)thread;
+
+/*!
+ * @abstract Proxy for invoking methods on default NSOperationQueue.
+ */
+-(id)queueProxy;
+
+/*!
+ * @abstract Proxy for invoking methods on specific NSOperationQueue.
+ */
+-(id)proxyForQueue:(NSOperationQueue*)queue;
+
+/*!
+ * @discussion Block current thread until methods has been invocated on target thread.
+ * @discussion Not supported by backgroundProxy proxies.
+ */
+-(id)waitUntilDone;
+
+/*!
+ * @abstract Delay method invocation.
+ * @discussion Overrides waitUntilDone.
+ */
+-(id)afterDelay:(NSTimeInterval)delay;
+
+@end

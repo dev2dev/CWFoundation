@@ -33,6 +33,8 @@
 
 /*!
  * @abstract Category on NSInvocation adding convinience methods for creating invocations and invoking on different targets.
+ *
+ * @deprecated This categoryy on NSInvocation is superseeded by NSObject<CWProxy>.
  */
 @interface NSInvocation (CWVariableArguments)
 

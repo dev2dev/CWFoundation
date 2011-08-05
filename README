@@ -30,7 +30,7 @@ only describes a subset of the funcationality.
 * NSError - Convinience additions for creating localized errors.
 * NSArray - Additions for inserting objects into sorted arrays.
 * NSDate - Additoins for working with ISO and reltive dates.
-* NSInvocation - Convinience additions for creating invocation instances.
+* NSObject - Methods for accessing asynchronious proxies.
 * NSObject - OO abstractions for run-time associated objects.
 * NSOPerationQueue - Adds a default queueu, and more.
 * NSURLFromDataTransformer - Store relative file URLs in Core Data.

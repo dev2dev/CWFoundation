@@ -44,4 +44,8 @@
 
 -(void)testInvokeInBackground;
 
+-(void)testCurrentThreadProxy;
+-(void)testBackgroundProxy;
+-(void)testQueueProxy;
+
 @end
