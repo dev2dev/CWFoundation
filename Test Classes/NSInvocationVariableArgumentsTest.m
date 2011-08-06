@@ -159,7 +159,7 @@ typedef struct {
 -(void)testCurrentThreadProxy;
 {
     NSConditionLock* lock = [[NSConditionLock alloc] initWithCondition:0];
-	[[self onThread:[NSThread currentThread]] unlockConditionalLock:lock];
+	[[self threadProxy:[NSThread currentThread]] unlockConditionalLock:lock];
     if (![lock lockWhenCondition:1
                       beforeDate:[NSDate dateWithTimeIntervalSinceNow:5]]) {
     	STFail(@"Could not aquire lock on main thread");
@@ -170,7 +170,7 @@ typedef struct {
 {
     NSLog(@"testBackgroundProxy called");
     NSConditionLock* lock = [[NSConditionLock alloc] initWithCondition:0];
-	[[self inBackground] unlockConditionalLock:lock];
+	[[self backgroundProxy] unlockConditionalLock:lock];
     if (![lock lockWhenCondition:1
                       beforeDate:[NSDate dateWithTimeIntervalSinceNow:5]]) {
     	STFail(@"Could not aquire lock on main thread");
@@ -180,7 +180,7 @@ typedef struct {
 -(void)testQueueProxy;
 {
     NSConditionLock* lock = [[NSConditionLock alloc] initWithCondition:0];
-	[[self onDefaultQueue] unlockConditionalLock:lock];
+	[[self defaultQueueProxy] unlockConditionalLock:lock];
     if (![lock lockWhenCondition:1
                       beforeDate:[NSDate dateWithTimeIntervalSinceNow:5]]) {
     	STFail(@"Could not aquire lock on main thread");

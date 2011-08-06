@@ -80,6 +80,20 @@
 -(NSInvocationOperation*)performSelectorInDefaultQueue:(SEL)aSelector withObject:(id)arg;
 
 /*!
+ * Invokes a method of the receiver on a specific queue.
+ *
+ * @param aSelector A selector that identifies the method to invoke. 
+ *									The method should not have a significant return value and 
+ *									should take a single argument of type id, or no arguments.
+ * @param queue The queue to invoke on.
+ * @param arg The argument to pass to the method when it is invoked. 
+ *            Pass nil if the method does not take an argument.
+ * @result an autoreleased NSInvocationOperation instance.
+ *			   Can be used to setup dependencies.
+ */
+-(NSInvocationOperation*)performSelector:(SEL)aSelector onQueue:(NSOperationQueue*)queue withObject:(id)arg;
+
+/*!
  * Invokes a method of the receiver on a new background queue.
  *
  * @param aSelector A selector that identifies the method to invoke. 
@@ -93,20 +107,6 @@
  * @result an autoreleased NSInvocationOperation instance.
  *			   Can be used to setup dependencies.
  */
--(NSInvocationOperation*)performSelectorInDefaultQueue:(SEL)aSelector withObject:(id)arg dependencies:(NSArray*)dependencies priority:(NSOperationQueuePriority)priority;
-
-/*!
- * Invokes a method of the receiver on a specific queue.
- *
- * @param aSelector A selector that identifies the method to invoke. 
- *									The method should not have a significant return value and 
- *									should take a single argument of type id, or no arguments.
- * @param queue The queue to invoke on.
- * @param arg The argument to pass to the method when it is invoked. 
- *            Pass nil if the method does not take an argument.
- * @result an autoreleased NSInvocationOperation instance.
- *			   Can be used to setup dependencies.
- */
--(NSInvocationOperation*)performSelector:(SEL)aSelector onQueue:(NSOperationQueue*)queue withObject:(id)arg;
+-(NSInvocationOperation*)performSelector:(SEL)aSelector onQueue:(NSOperationQueue*)queue withObject:(id)arg dependencies:(NSArray*)dependencies priority:(NSOperationQueuePriority)priority waitUntilDone:(BOOL)wait;
 
 @end

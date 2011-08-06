@@ -72,7 +72,14 @@ static NSOperationQueue* cw_defaultQueue = nil;
                       withObject:arg];
 }
 
--(NSInvocationOperation*)performSelectorInDefaultQueue:(SEL)aSelector withObject:(id)arg  dependencies:(NSArray*)dependencies priority:(NSOperationQueuePriority)priority;
+-(NSInvocationOperation*)performSelector:(SEL)aSelector onQueue:(NSOperationQueue*)queue withObject:(id)arg;
+{
+	NSInvocationOperation* operation = [[NSInvocationOperation alloc] initWithTarget:self selector:aSelector object:arg];
+    [queue addOperation:operation];
+	return [operation autorelease];  
+}
+
+-(NSInvocationOperation*)performSelector:(SEL)aSelector onQueue:(NSOperationQueue*)queue withObject:(id)arg dependencies:(NSArray*)dependencies priority:(NSOperationQueuePriority)priority waitUntilDone:(BOOL)wait;
 {
 	NSInvocationOperation* operation = [[NSInvocationOperation alloc] initWithTarget:self selector:aSelector object:arg];
     [operation setQueuePriority:priority];
@@ -80,13 +87,16 @@ static NSOperationQueue* cw_defaultQueue = nil;
         [operation addDependency:dependency]; 
     }
     [[NSOperationQueue defaultQueue] addOperation:operation];
-	return [operation autorelease];  
-}
-
--(NSInvocationOperation*)performSelector:(SEL)aSelector onQueue:(NSOperationQueue*)queue withObject:(id)arg;
-{
-	NSInvocationOperation* operation = [[NSInvocationOperation alloc] initWithTarget:self selector:aSelector object:arg];
-    [queue addOperation:operation];
+    if (wait) {
+        if ([operation respondsToSelector:@selector(waitUntilFinished)]) {
+		    [operation performSelector:@selector(waitUntilFinished)];
+        } else {
+			while ([[queue operations] containsObject:operation]) {
+            	[[NSRunLoop currentRunLoop] runMode:NSRunLoopCommonModes
+                                         beforeDate:[NSDate dateWithTimeIntervalSinceNow:0.05]];
+            }
+        }
+    }
 	return [operation autorelease];  
 }
 

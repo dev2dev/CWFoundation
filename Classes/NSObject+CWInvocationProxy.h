@@ -42,27 +42,27 @@
 /*!
  * @abstract Proxy for invoking methods on the main thread.
  */
--(id)onMainThread;
+-(id)mainThreadProxy;
 
 /*!
  * @abstract Proxy for invoking methods on a background thread.
  */
--(id)inBackground;
+-(id)backgroundProxy;
 
 /*!
  * @abstract Proxy for invoking methods on specific thread, optionaly block until done.
  */
--(id)onThread:(NSThread*)thread;
+-(id)threadProxy:(NSThread*)thread;
 
 /*!
  * @abstract Proxy for invoking methods on default NSOperationQueue.
  */
--(id)onDefaultQueue;
+-(id)defaultQueueProxy;
 
 /*!
  * @abstract Proxy for invoking methods on specific NSOperationQueue.
  */
--(id)onQueue:(NSOperationQueue*)queue;
+-(id)queueProxy:(NSOperationQueue*)queue;
 
 /*!
  * @discussion Block current thread until methods has been invocated on target thread.

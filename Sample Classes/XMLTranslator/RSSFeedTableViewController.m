@@ -64,7 +64,7 @@
 {
 	if (key == nil && [name isEqualToString:@"title"]) {
         // If it is the feeds title then set the navigation title but skip adding the object.
-        [[self.navigationItem onMainThread] setTitle:anObject];
+        [[self.navigationItem mainThreadProxy] setTitle:anObject];
     	return nil;
     }
     return anObject;

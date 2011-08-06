@@ -52,37 +52,44 @@ typedef enum {
 +(id)threadProxyForTarget:(id)target onThread:(NSThread*)thread;
 +(id)queueProxyForTarget:(id)target onQueue:(NSOperationQueue*)queue;
 
+/*!
+ * @abstract Hook for preparing/replacing objects before transfereing to new context.
+ */
+-(void)prepareInvocationForForwardingToNewContext:(NSInvocation*)invocation;
+
+/*!
+ * @abstract Hook for preparing/replacing objects before invoking in new context.
+ */
+-(void)prepareInvocationForInvokingInNewContext:(NSInvocation*)invocation;
+
+
 @end
 
 
 
 @implementation NSObject (CWInvocationProxy)
 
--(id)onMainThread;
+-(id)mainThreadProxy;
 {
-    return [self onThread:[NSThread mainThread]];
+    return [self threadProxy:[NSThread mainThread]];
 }
 
--(id)inBackground;
+-(id)backgroundProxy;
 {
     return [CWInvocationProxy backgroundProxyForTarget:self];
 }
 
--(id)onThread:(NSThread*)thread;
+-(id)threadProxy:(NSThread*)thread;
 {
-    if (thread == [NSThread currentThread]) {
-        return self;
-    } else {
-        return [CWInvocationProxy threadProxyForTarget:self onThread:thread];
-    }
+	return [CWInvocationProxy threadProxyForTarget:self onThread:thread];
 }
 
--(id)onDefaultQueue;
+-(id)defaultQueueProxy;
 {
-    return [self onQueue:[NSOperationQueue defaultQueue]];
+    return [self queueProxy:[NSOperationQueue defaultQueue]];
 }
 
--(id)onQueue:(NSOperationQueue*)queue;
+-(id)queueProxy:(NSOperationQueue*)queue;
 {
     return [CWInvocationProxy queueProxyForTarget:self onQueue:queue];
 }
@@ -129,6 +136,15 @@ typedef enum {
     return proxy;
 }
 
+-(id)init;
+{
+    self = [super init];
+    if (self) {
+    	_delay = -1;
+    }
+    return self;
+}
+
 -(void)dealloc;
 {
     [_target release];
@@ -151,34 +167,53 @@ typedef enum {
     }
 }
 
+-(void)prepareInvocationForForwardingToNewContext:(NSInvocation*)invocation;
+{
+}
+
+-(void)prepareInvocationForInvokingInNewContext:(NSInvocation*)invocation;
+{
+}
+
+-(void)performInvocation:(NSInvocation*)invocation;
+{
+    [self prepareInvocationForInvokingInNewContext:invocation];
+    [invocation invoke];
+}
+
 -(void)forwardInvocation:(NSInvocation *)invocation;
 {
-    if (_delay > 0) {
-    	[self performSelector:_cmd 
-                   withObject:invocation 
+    if (_delay >= 0) {
+    	[self performSelector:@selector(forwardInvocation:) 
+                   withObject:invocation
                    afterDelay:_delay];
-        _delay = 0;
+        _delay = -1;
         return;
     }
+    [invocation setTarget:_target];
+    [self prepareInvocationForForwardingToNewContext:invocation];
 	switch (_type) {
         case CWInvocationProxyTypeBackgound:
-            [invocation performSelectorInBackground:@selector(invokeWithTarget:) 
-                                         withObject:_target];
+            [self performSelectorInBackground:@selector(performInvocation:)
+                                   withObject:invocation];
             break;
         case CWInvocationProxyTypeThread:
-            [invocation performSelector:@selector(invokeWithTarget:)
-                               onThread:_thread
-                             withObject:_target
-                          waitUntilDone:_wait];
+            if ([NSThread currentThread] == _thread) {
+                [self performInvocation:invocation];
+            } else {
+                [self performSelector:@selector(performInvocation:)
+                             onThread:_thread
+                           withObject:invocation
+                        waitUntilDone:_wait];
+            }
             break;
         case CWInvocationProxyTypeQueue: {
-            [invocation setTarget:_target];
-			NSInvocationOperation* operation = [[NSInvocationOperation alloc] initWithInvocation:invocation];
-			[_queue addOperation:operation];
-            if (_wait) {
-            	[operation waitUntilFinished];
-            }
-            [operation release];
+            [self performSelector:@selector(performInvocation:)
+                          onQueue:_queue
+                       withObject:invocation
+                     dependencies:nil
+                         priority:NSOperationQueuePriorityNormal
+                    waitUntilDone:_wait];
             break;
         }
     }
